@@ -21,6 +21,7 @@
 | 📁 **[General_Config/Seven1echo](./General_Config/Seven1echo/README.md)** | 2 个 | [点击浏览详细列表](./General_Config/Seven1echo/README.md) |
 | 📁 **[General_Config/Sgraqwq](./General_Config/Sgraqwq/README.md)** | 1 个 | [点击浏览详细列表](./General_Config/Sgraqwq/README.md) |
 | 📁 **[General_Config/Tangerinell](./General_Config/Tangerinell/README.md)** | 1 个 | [点击浏览详细列表](./General_Config/Tangerinell/README.md) |
+| 📁 **[General_Config/YiXuanZX](./General_Config/YiXuanZX/README.md)** | 1 个 | [点击浏览详细列表](./General_Config/YiXuanZX/README.md) |
 | 📁 **[General_Config/ameyukisora](./General_Config/ameyukisora/README.md)** | 1 个 | [点击浏览详细列表](./General_Config/ameyukisora/README.md) |
 | 📁 **[General_Config/bgpeer](./General_Config/bgpeer/README.md)** | 1 个 | [点击浏览详细列表](./General_Config/bgpeer/README.md) |
 | 📁 **[General_Config/echs-top](./General_Config/echs-top/README.md)** | 1 个 | [点击浏览详细列表](./General_Config/echs-top/README.md) |
