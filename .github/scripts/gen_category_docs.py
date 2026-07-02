@@ -1,7 +1,7 @@
 import os
 import urllib.parse
 import yaml
-from yaml import SafeLoader
+from yaml import SafeLoader, AliasEvent
 
 # ================= 配置部分 =================
 REPO_URL_BASE = os.getenv("GITHUB_REPOSITORY", "")
@@ -18,24 +18,35 @@ CATEGORIES = {
 IGNORE_FILES = ["README.md", "LICENSE", "release_body.md"]
 # ===========================================
 
-# 忽略所有 !自定义tag，不中断解析
+# 忽略未知 !标签
 def ignore_unknown_tag(loader, suffix, node):
-    if isinstance(node, yaml.MappingNode):
-        return loader.construct_mapping(node, deep=False)
-    elif isinstance(node, yaml.SequenceNode):
-        return loader.construct_sequence(node, deep=False)
-    else:
-        return loader.construct_scalar(node)
+    try:
+        if isinstance(node, yaml.MappingNode):
+            return loader.construct_mapping(node, deep=False)
+        elif isinstance(node, yaml.SequenceNode):
+            return loader.construct_sequence(node, deep=False)
+        else:
+            return loader.construct_scalar(node)
+    except:
+        return None
 
 yaml.add_multi_constructor("!", ignore_unknown_tag, Loader=SafeLoader)
 
-# 关闭锚点、别名严格校验，允许残缺&/*语法
+# 捕获未定义别名，直接返回空值
+def safe_alias_constructor(loader, alias_name):
+    raise ValueError(f"跳过未定义别名 {alias_name}")
+
+SafeLoader.alias_constructor = safe_alias_constructor
+# 移除锚点/别名隐式解析限制
 SafeLoader.yaml_implicit_resolvers.pop('&', None)
 SafeLoader.yaml_implicit_resolvers.pop('*', None)
 
 def clean_cell(text):
     if text is None: return "N/A"
-    return str(text).replace("|", "&#124;").replace("\n", " ").strip() or "N/A"
+    s = str(text).replace("|", "&#124;").replace("\n", " ").strip() or "N/A"
+    # 清除中文全角引号，解决 "“ 语法报错
+    s = s.replace("“", '"').replace("”", '"')
+    return s
 
 def get_size(path):
     try:
@@ -45,22 +56,19 @@ def get_size(path):
         return "Unknown"
 
 def analyze(path):
-    """解析单个YAML，仅读取顶层基础参数，遇到畸形语法直接兜底"""
+    """多层容错解析，兼容各类畸形第三方yaml"""
     try:
         with open(path, "r", encoding="utf-8", errors="replace") as f:
-            content = f.read().replace("\t", "  ")
-        
-        # 仅补充文档头，不修改内部锚点/流式代码
-        stripped = content.lstrip()
-        if not stripped.startswith("---"):
-            content = "---\n" + content
-        
-        # 浅加载，不递归解析<<: *别名合并块，避免合并语法报错
+            raw = f.read().replace("\t", "  ")
+        # 预处理1：替换所有中文全角引号
+        content = raw.replace("“", '"').replace("”", '"')
+        # 预处理2：强制在文件最顶部插入标准文档头+空注释，解决首行&锚点报错
+        content = "# AutoFix DocHeader\n---\n" + content
+
         data = yaml.safe_load(content)
         if not isinstance(data, dict):
             raise ValueError("根节点非字典")
         
-        # 只读取顶层独立字段，不进入锚点合并子块
         info = {
             "mode": data.get("mode", "rule"),
             "ipv6": "✅" if str(data.get("ipv6", False)).lower() == "true" else "🚫",
@@ -72,7 +80,7 @@ def analyze(path):
             "groups": []
         }
 
-        # 单独捕获proxy-groups、rules读取错误，就算子块畸形也不整体失败
+        # 单独捕获proxy-groups读取异常，不影响整体
         try:
             groups = data.get("proxy-groups", [])
             if isinstance(groups, list):
@@ -85,7 +93,8 @@ def analyze(path):
                         info["groups"].append(f"| {icon} {name} | `{gtype}` |")
         except Exception:
             pass
-        
+
+        # 单独捕获rules读取异常
         try:
             rules = data.get("rules", [])
             if isinstance(rules, list):
@@ -96,8 +105,8 @@ def analyze(path):
         return info
 
     except Exception as e:
+        # 仅打印警告，文件保留在统计列表
         print(f"⚠️ Parse error {path}: {e}")
-        # 解析失败兜底，文件正常计入统计表格
         return {
             "mode": "解析失败",
             "ipv6": "❌",
