@@ -26,6 +26,7 @@
 | 📁 **[General_Config/bgpeer](./General_Config/bgpeer/README.md)** | 1 个 | [点击浏览详细列表](./General_Config/bgpeer/README.md) |
 | 📁 **[General_Config/echs-top](./General_Config/echs-top/README.md)** | 1 个 | [点击浏览详细列表](./General_Config/echs-top/README.md) |
 | 📁 **[General_Config/fufu](./General_Config/fufu/README.md)** | 1 个 | [点击浏览详细列表](./General_Config/fufu/README.md) |
+| 📁 **[General_Config/gog-xie](./General_Config/gog-xie/README.md)** | 3 个 | [点击浏览详细列表](./General_Config/gog-xie/README.md) |
 | 📁 **[General_Config/iKeLee](./General_Config/iKeLee/README.md)** | 2 个 | [点击浏览详细列表](./General_Config/iKeLee/README.md) |
 | 📁 **[General_Config/liandu2024](./General_Config/liandu2024/README.md)** | 5 个 | [点击浏览详细列表](./General_Config/liandu2024/README.md) |
 | 📁 **[General_Config/liuran001](./General_Config/liuran001/README.md)** | 1 个 | [点击浏览详细列表](./General_Config/liuran001/README.md) |
@@ -43,6 +44,7 @@
 | 📁 **[Smart_Mode/HenryChiao](./Smart_Mode/HenryChiao/README.md)** | 4 个 | [点击浏览详细列表](./Smart_Mode/HenryChiao/README.md) |
 | 📁 **[Smart_Mode/echs-top](./Smart_Mode/echs-top/README.md)** | 1 个 | [点击浏览详细列表](./Smart_Mode/echs-top/README.md) |
 | 📁 **[Smart_Mode/edison](./Smart_Mode/edison/README.md)** | 1 个 | [点击浏览详细列表](./Smart_Mode/edison/README.md) |
+| 📁 **[Smart_Mode/gog-xie](./Smart_Mode/gog-xie/README.md)** | 2 个 | [点击浏览详细列表](./Smart_Mode/gog-xie/README.md) |
 | 📁 **[Smart_Mode/liandu2024](./Smart_Mode/liandu2024/README.md)** | 3 个 | [点击浏览详细列表](./Smart_Mode/liandu2024/README.md) |
 | 📁 **[Smart_Mode/qichiyuhub](./Smart_Mode/qichiyuhub/README.md)** | 1 个 | [点击浏览详细列表](./Smart_Mode/qichiyuhub/README.md) |
 
