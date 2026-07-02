@@ -1,7 +1,8 @@
 import os
 import urllib.parse
 import yaml
-from yaml import SafeLoader, AliasEvent
+import warnings
+from yaml import SafeLoader
 
 # ================= 配置部分 =================
 REPO_URL_BASE = os.getenv("GITHUB_REPOSITORY", "")
@@ -18,6 +19,9 @@ CATEGORIES = {
 IGNORE_FILES = ["README.md", "LICENSE", "release_body.md"]
 # ===========================================
 
+# 全局屏蔽yaml库底层警告
+warnings.filterwarnings("ignore", category=yaml.YAMLLoadWarning)
+
 # 忽略未知 !标签
 def ignore_unknown_tag(loader, suffix, node):
     try:
@@ -32,19 +36,17 @@ def ignore_unknown_tag(loader, suffix, node):
 
 yaml.add_multi_constructor("!", ignore_unknown_tag, Loader=SafeLoader)
 
-# 捕获未定义别名，直接返回空值
+# 捕获未定义别名，直接返回空值不抛错
 def safe_alias_constructor(loader, alias_name):
-    raise ValueError(f"跳过未定义别名 {alias_name}")
+    return None
 
 SafeLoader.alias_constructor = safe_alias_constructor
-# 移除锚点/别名隐式解析限制
 SafeLoader.yaml_implicit_resolvers.pop('&', None)
 SafeLoader.yaml_implicit_resolvers.pop('*', None)
 
 def clean_cell(text):
     if text is None: return "N/A"
     s = str(text).replace("|", "&#124;").replace("\n", " ").strip() or "N/A"
-    # 清除中文全角引号，解决 "“ 语法报错
     s = s.replace("“", '"').replace("”", '"')
     return s
 
@@ -56,16 +58,28 @@ def get_size(path):
         return "Unknown"
 
 def analyze(path):
-    """多层容错解析，兼容各类畸形第三方yaml"""
+    """多层容错解析，屏蔽所有冗余警告"""
     try:
         with open(path, "r", encoding="utf-8", errors="replace") as f:
             raw = f.read().replace("\t", "  ")
-        # 预处理1：替换所有中文全角引号
+        # 预处理：替换全角引号 + 强制补文档头
         content = raw.replace("“", '"').replace("”", '"')
-        # 预处理2：强制在文件最顶部插入标准文档头+空注释，解决首行&锚点报错
         content = "# AutoFix DocHeader\n---\n" + content
 
         data = yaml.safe_load(content)
+        # 区分两种不解析场景：数组规则集、空文件
+        if isinstance(data, list):
+            # 规则集文件（redir-host/fake-ip），直接返回极简数据，不打印警告
+            return {
+                "mode": "规则集文件",
+                "ipv6": "—",
+                "tun": "—",
+                "mixed_port": "—",
+                "ext_ctrl": "—",
+                "group_count": 0,
+                "rule_count": len(data) if isinstance(data, list) else 0,
+                "groups": []
+            }
         if not isinstance(data, dict):
             raise ValueError("根节点非字典")
         
@@ -80,7 +94,7 @@ def analyze(path):
             "groups": []
         }
 
-        # 单独捕获proxy-groups读取异常，不影响整体
+        # 隔离proxy-groups读取异常
         try:
             groups = data.get("proxy-groups", [])
             if isinstance(groups, list):
@@ -94,7 +108,7 @@ def analyze(path):
         except Exception:
             pass
 
-        # 单独捕获rules读取异常
+        # 隔离rules读取异常
         try:
             rules = data.get("rules", [])
             if isinstance(rules, list):
@@ -104,9 +118,8 @@ def analyze(path):
 
         return info
 
-    except Exception as e:
-        # 仅打印警告，文件保留在统计列表
-        print(f"⚠️ Parse error {path}: {e}")
+    except Exception:
+        # 删除print警告输出，不再打印⚠️日志
         return {
             "mode": "解析失败",
             "ipv6": "❌",
