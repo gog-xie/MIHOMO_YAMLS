@@ -2,9 +2,25 @@
 
 [🔙 返回上一级](../README.md)
 
-> 🤖 自动技术分析 | 1 个配置文件
+> 🤖 自动技术分析 | 2 个配置文件
+
+## ⚔️ 配置横向对比
+
+| 特性 | `config_version2.yaml` | `config.yaml` |
+| :--- | :--- | :--- |
+| **大小** | 30.9 KB | 28.5 KB |
+| **混合端口** | N/A | 7893 |
+| **面板地址** | N/A | 127.0.0.1:9090 |
+| **运行模式** | 解析失败 | rule |
+| **TUN** | ❌ | ✅ |
+| **策略组** | **0** | **25** |
+| **规则数** | **0** | **35** |
 
 ## 📄 配置详情
+
+#### 📝 config_version2.yaml
+- **路径**: `config_version2.yaml` | **大小**: 30.9 KB | [查看源码](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Mitchell/config_version2.yaml)
+- **模式**: 解析失败 | **TUN**: ❌ | **IPv6**: ❌
 
 #### 📝 config.yaml
 - **路径**: `config.yaml` | **大小**: 28.5 KB | [查看源码](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Mitchell/config.yaml)
