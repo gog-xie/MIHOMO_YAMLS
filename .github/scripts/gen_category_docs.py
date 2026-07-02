@@ -1,7 +1,6 @@
 import os
 import urllib.parse
 import yaml
-from yaml import SafeLoader
 
 # ================= 配置部分 =================
 REPO_URL_BASE = os.getenv("GITHUB_REPOSITORY", "")
@@ -18,35 +17,11 @@ CATEGORIES = {
 IGNORE_FILES = ["README.md", "LICENSE", "release_body.md"]
 # ===========================================
 
-# 忽略未知 !自定义标签
-def ignore_unknown_tag(loader, suffix, node):
-    try:
-        if isinstance(node, yaml.MappingNode):
-            return loader.construct_mapping(node, deep=False)
-        elif isinstance(node, yaml.SequenceNode):
-            return loader.construct_sequence(node, deep=False)
-        else:
-            return loader.construct_scalar(node)
-    except:
-        return None
-
-yaml.add_multi_constructor("!", ignore_unknown_tag, Loader=SafeLoader)
-
-# 遇到未定义别名直接返回空，阻断报错
-def safe_alias_constructor(loader, alias_name):
-    return None
-
-SafeLoader.alias_constructor = safe_alias_constructor
-# 放宽锚点/别名隐式解析限制
-SafeLoader.yaml_implicit_resolvers.pop('&', None)
-SafeLoader.yaml_implicit_resolvers.pop('*', None)
+yaml.add_multi_constructor("!", lambda loader, suffix, node: None, Loader=yaml.SafeLoader)
 
 def clean_cell(text):
     if text is None: return "N/A"
-    s = str(text).replace("|", "&#124;").replace("\n", " ").strip() or "N/A"
-    # 清除中文全角引号
-    s = s.replace("“", '"').replace("”", '"')
-    return s
+    return str(text).replace("|", "&#124;").replace("\n", " ").strip() or "N/A"
 
 def get_size(path):
     try:
@@ -56,87 +31,42 @@ def get_size(path):
         return "Unknown"
 
 def analyze(path):
-    """极简稳定解析逻辑，去掉复杂正则改写避免大面积崩溃"""
+    """解析单个 YAML 文件并提取关键信息"""
     try:
-        with open(path, "r", encoding="utf-8", errors="replace") as f:
-            raw = f.read().replace("\t", "  ")
-        
-        # 仅做2处安全预处理，不修改原有行结构，杜绝改写破坏语法
-        content = raw.replace("“", '"').replace("”", '"')
-        stripped_text = content.lstrip()
-        if not stripped_text.startswith("---"):
-            content = "---\n" + content
-
+        with open(path, "r", encoding="utf-8") as f:
+            content = f.read().replace("\t", "  ")
         data = yaml.safe_load(content)
-
-        # 判断规则集数组文件
-        if isinstance(data, list):
-            return {
-                "mode": "规则集文件",
-                "ipv6": "—",
-                "tun": "—",
-                "mixed_port": "—",
-                "ext_ctrl": "—",
-                "group_count": 0,
-                "rule_count": len(data),
-                "groups": []
-            }
-        # 非字典直接抛出
-        if not isinstance(data, dict):
-            raise ValueError("根节点非字典")
+        if not isinstance(data, dict): return None
         
-        # 读取顶层基础字段
         info = {
             "mode": data.get("mode", "rule"),
             "ipv6": "✅" if str(data.get("ipv6", False)).lower() == "true" else "🚫",
             "tun": "✅" if data.get("tun", {}).get("enable") else "🚫",
             "mixed_port": data.get("mixed-port", "-"),
             "ext_ctrl": data.get("external-controller", "-"),
-            "group_count": 0,
-            "rule_count": 0,
+            "group_count": len(data.get("proxy-groups", [])) if isinstance(data.get("proxy-groups"), list) else 0,
+            "rule_count": len(data.get("rules", [])) if isinstance(data.get("rules"), list) else 0,
             "groups": []
         }
-
-        # 单独捕获proxy-groups读取异常，不影响整体返回
-        try:
-            groups = data.get("proxy-groups", [])
-            if isinstance(groups, list):
-                info["group_count"] = len(groups)
-                for g in groups[:20]:
-                    if isinstance(g, dict):
-                        name = clean_cell(g.get("name", "Unknown"))
-                        gtype = g.get("type", "select")
-                        icon = {"url-test": "♻️", "fallback": "🔧", "load-balance": "⚖️"}.get(gtype, "👆")
-                        info["groups"].append(f"| {icon} {name} | `{gtype}` |")
-        except Exception:
-            pass
-
-        # 单独捕获rules读取异常
-        try:
-            rules = data.get("rules", [])
-            if isinstance(rules, list):
-                info["rule_count"] = len(rules)
-        except Exception:
-            pass
-
+        
+        groups = data.get("proxy-groups", [])
+        if isinstance(groups, list):
+            for g in groups[:20]:
+                if isinstance(g, dict):
+                    name = clean_cell(g.get("name", "Unknown"))
+                    gtype = g.get("type", "select")
+                    icon = {"url-test": "♻️", "fallback": "🔧", "load-balance": "⚖️"}.get(gtype, "👆")
+                    info["groups"].append(f"| {icon} {name} | `{gtype}` |")
         return info
-
-    except Exception:
-        # 异常直接返回兜底数据，无日志输出
-        return {
-            "mode": "解析失败",
-            "ipv6": "❌",
-            "tun": "❌",
-            "mixed_port": "N/A",
-            "ext_ctrl": "N/A",
-            "group_count": 0,
-            "rule_count": 0,
-            "groups": []
-        }
+    except Exception as e:
+        print(f"⚠️ Parse error {path}: {e}")
+        return None
 
 def scan_folder(folder):
+    """递归扫描文件夹内的所有 YAML 文件"""
     files = []
     if not os.path.isdir(folder): return files
+    
     for root, dirs, filenames in os.walk(folder):
         dirs[:] = [d for d in dirs if not d.startswith('.')]
         for f in filenames:
@@ -146,20 +76,28 @@ def scan_folder(folder):
     return files
 
 def make_readme(folder, title, files, back_link_text, back_link_url):
+    """生成 README 的核心逻辑"""
     if not files: return
+
     data_map = {}
     for rel, full in files:
         parsed = analyze(full)
-        data_map[rel] = {"size": get_size(full), "info": parsed}
+        if parsed:
+            data_map[rel] = {"size": get_size(full), "info": parsed}
+
     if not data_map: return
 
     lines = [f"# 📂 {title}", "", f"[{back_link_text}]({back_link_url})", "", f"> 🤖 自动技术分析 | {len(data_map)} 个配置文件", ""]
+
+    # 1. 对比表格 (如果文件数大于1)
     if len(data_map) > 1:
         lines.extend(["## ⚔️ 配置横向对比", ""])
+        # 表头显示文件名
         headers = ["特性"] + [f"`{os.path.basename(k)}`" for k in data_map.keys()]
         lines.append("| " + " | ".join(headers) + " |")
         lines.append("| :--- " + "| :--- " * len(data_map) + "|")
         lines.append("| **大小** | " + " | ".join([v["size"] for v in data_map.values()]) + " |")
+        
         configs = [("mixed_port", "混合端口"), ("ext_ctrl", "面板地址"), ("mode", "运行模式"), 
                    ("tun", "TUN"), ("group_count", "策略组"), ("rule_count", "规则数")]
         for key, label in configs:
@@ -169,18 +107,28 @@ def make_readme(folder, title, files, back_link_text, back_link_url):
                 row.append(f"**{val}**" if "count" in key else clean_cell(val))
             lines.append("| " + " | ".join(row) + " |")
         lines.append("")
+
+    # 2. 详细列表
     lines.extend(["## 📄 配置详情", ""])
+    
+    # 按照 "子文件夹/作者" 分组显示
     by_author = {}
     for rel, data in data_map.items():
+        # 如果是在子文件夹里生成，这里 author 可能是 '.' 或者文件名本身，逻辑通用
         author = rel.split(os.sep)[0] if os.sep in rel else "Root"
         by_author.setdefault(author, []).append((rel, data))
+    
     for author, items in sorted(by_author.items()):
+        # 如果是在根目录生成，显示作者名；如果是在子目录生成(author是Root)，则不显示这一级标题
         if author != "Root":
             lines.extend([f"### 👤 {author}", ""])
+            
         for rel, data in items:
             info = data["info"]
+            # 构建 GitHub 源码链接
             url_path = os.path.join(folder, rel).replace(os.sep, '/')
             url = f"{REPO_URL}/{urllib.parse.quote(url_path)}"
+            
             lines.append(f"#### 📝 {os.path.basename(rel)}")
             lines.append(f"- **路径**: `{rel}` | **大小**: {data['size']} | [查看源码]({url})")
             lines.append(f"- **模式**: {info['mode']} | **TUN**: {info['tun']} | **IPv6**: {info['ipv6']}")
@@ -192,6 +140,7 @@ def make_readme(folder, title, files, back_link_text, back_link_url):
             lines.append("")
         if author != "Root":
             lines.append("---")
+    
     out_path = os.path.join(folder, "README.md")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
@@ -199,17 +148,28 @@ def make_readme(folder, title, files, back_link_text, back_link_url):
 
 def process_category(folder, title):
     if not os.path.isdir(folder): return
+
+    # --- 1. 生成主分类的 README (包含所有子文件) ---
     all_files = scan_folder(folder)
+    # 主分类的返回链接指向项目根目录
     make_readme(folder, title, all_files, "🔙 返回主页", "../../README.md")
+
+    # --- 2. 遍历一级子目录，为每个子目录生成 README ---
+    # 获取第一层子文件夹 (例如: THEYAMLS/General_Config/AuthorA)
     try:
         sub_dirs = [d for d in os.listdir(folder) if os.path.isdir(os.path.join(folder, d)) and not d.startswith('.')]
     except OSError:
         sub_dirs = []
+
     for sub_dir in sub_dirs:
         sub_path = os.path.join(folder, sub_dir)
+        # 扫描该子文件夹内的文件
         sub_files = scan_folder(sub_path)
+        
         if sub_files:
+            # 子文件夹的标题使用文件夹名
             sub_title = f"{sub_dir} ({title.split(' ')[0]})"
+            # 子文件夹的返回链接指向上一级 (主分类目录)
             make_readme(sub_path, sub_title, sub_files, "🔙 返回上一级", "../README.md")
 
 if __name__ == "__main__":
