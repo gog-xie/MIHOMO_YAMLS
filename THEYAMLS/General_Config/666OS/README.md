@@ -9,18 +9,38 @@
 | 特性 | `OneTouch_Config.yaml` | `Pro_en.yaml` | `MihomoPro_Config.yaml` | `Mini_en.yaml` | `Lite_en.yaml` |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **大小** | 12.2 KB | 14.9 KB | 22.3 KB | 4.8 KB | 10.0 KB |
-| **混合端口** | N/A | 7893 | N/A | 7893 | 7893 |
-| **面板地址** | N/A | 127.0.0.1:9090 | N/A | 127.0.0.1:9090 | 127.0.0.1:9090 |
-| **运行模式** | 解析失败 | rule | 解析失败 | rule | rule |
-| **TUN** | ❌ | 🚫 | ❌ | 🚫 | 🚫 |
-| **策略组** | **0** | **37** | **0** | **3** | **17** |
-| **规则数** | **0** | **30** | **0** | **8** | **19** |
+| **混合端口** | 7893 | 7893 | 7893 | 7893 | 7893 |
+| **面板地址** | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 |
+| **运行模式** | rule | rule | rule | rule | rule |
+| **TUN** | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 |
+| **策略组** | **14** | **37** | **51** | **3** | **17** |
+| **规则数** | **23** | **30** | **40** | **8** | **19** |
 
 ## 📄 配置详情
 
 #### 📝 OneTouch_Config.yaml
 - **路径**: `OneTouch_Config.yaml` | **大小**: 12.2 KB | [查看源码](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/OneTouch_Config.yaml)
-- **模式**: 解析失败 | **TUN**: ❌ | **IPv6**: ❌
+- **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
+<details>
+<summary>🔍 策略组 (14个)</summary>
+
+| 名称 | 类型 |
+| :--- | :--- |
+| 👆 一键连 | `select` |
+| 👆 人工智能 | `select` |
+| 👆 社交平台 | `select` |
+| 👆 国际媒体 | `select` |
+| 👆 国内流量 | `select` |
+| 👆 手动选择 | `select` |
+| 👆 直接连接 | `select` |
+| ♻️ 香港自动 | `url-test` |
+| ♻️ 台湾自动 | `url-test` |
+| ♻️ 日本自动 | `url-test` |
+| ♻️ 狮城自动 | `url-test` |
+| ♻️ 韩国自动 | `url-test` |
+| ♻️ 美国自动 | `url-test` |
+| ♻️ 欧洲自动 | `url-test` |
+</details>
 
 #### 📝 Pro_en.yaml
 - **路径**: `Pro_en.yaml` | **大小**: 14.9 KB | [查看源码](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/Pro_en.yaml)
@@ -55,7 +75,34 @@
 
 #### 📝 MihomoPro_Config.yaml
 - **路径**: `MihomoPro_Config.yaml` | **大小**: 22.3 KB | [查看源码](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/MihomoPro_Config.yaml)
-- **模式**: 解析失败 | **TUN**: ❌ | **IPv6**: ❌
+- **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
+<details>
+<summary>🔍 策略组 (51个)</summary>
+
+| 名称 | 类型 |
+| :--- | :--- |
+| 👆 默认代理 | `select` |
+| 👆 国外流量 | `select` |
+| 👆 国内流量 | `select` |
+| 👆 兜底流量 | `select` |
+| 👆 直接连接 | `select` |
+| 👆 网络测试 | `select` |
+| 👆 抖快书定位 | `select` |
+| 👆 Emby服 | `select` |
+| 👆 油管视频 | `select` |
+| 👆 奈飞视频 | `select` |
+| 👆 国际媒体 | `select` |
+| 👆 新闻媒体 | `select` |
+| 👆 电报消息 | `select` |
+| 👆 推特社交 | `select` |
+| 👆 社交平台 | `select` |
+| 👆 人工智能 | `select` |
+| 👆 货币平台 | `select` |
+| 👆 游戏平台 | `select` |
+| 👆 微软服务 | `select` |
+| 👆 谷歌服务 | `select` |
+| ... | 还有 31 个 |
+</details>
 
 #### 📝 Mini_en.yaml
 - **路径**: `Mini_en.yaml` | **大小**: 4.8 KB | [查看源码](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/Mini_en.yaml)
