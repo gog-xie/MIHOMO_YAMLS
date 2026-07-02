@@ -1,7 +1,6 @@
 import os
 import urllib.parse
 import yaml
-import warnings
 from yaml import SafeLoader
 
 # ================= 配置部分 =================
@@ -18,9 +17,6 @@ CATEGORIES = {
 
 IGNORE_FILES = ["README.md", "LICENSE", "release_body.md"]
 # ===========================================
-
-# 全局屏蔽yaml库底层警告
-warnings.filterwarnings("ignore", category=yaml.YAMLLoadWarning)
 
 # 忽略未知 !标签
 def ignore_unknown_tag(loader, suffix, node):
@@ -119,7 +115,7 @@ def analyze(path):
         return info
 
     except Exception:
-        # 删除print警告输出，不再打印⚠️日志
+        # 彻底删除警告打印，不再输出日志
         return {
             "mode": "解析失败",
             "ipv6": "❌",
