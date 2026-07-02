@@ -8,31 +8,4 @@
 
 #### 📝 OneSmartProMCX.yaml
 - **路径**: `OneSmartProMCX.yaml` | **大小**: 38.1 KB | [查看源码](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/Smart_Mode/edison/OneSmartProMCX.yaml)
-- **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
-<details>
-<summary>🔍 策略组 (39个)</summary>
-
-| 名称 | 类型 |
-| :--- | :--- |
-| 👆 Proxy | `select` |
-| 👆 AI | `select` |
-| 👆 ProxyGame | `select` |
-| 👆 Streaming | `select` |
-| 👆 Google | `select` |
-| 👆 Microsoft | `select` |
-| 👆 Bing | `select` |
-| 👆 Speedtest | `select` |
-| 👆 TikTok | `select` |
-| 👆 Emby | `select` |
-| 👆 PayPal | `select` |
-| 👆 Crypto | `select` |
-| 👆 Apple | `select` |
-| 👆 漏网之鱼 | `select` |
-| 👆 Tracker | `select` |
-| 👆 国内直连 | `select` |
-| ⚖️ 中转服务 | `load-balance` |
-| 🔧 香港-故转 | `fallback` |
-| 🔧 台湾-故转 | `fallback` |
-| 🔧 日本-故转 | `fallback` |
-| ... | 还有 19 个 |
-</details>
+- **模式**: 解析失败 | **TUN**: ❌ | **IPv6**: ❌

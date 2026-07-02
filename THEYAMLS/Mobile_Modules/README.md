@@ -9,12 +9,12 @@
 | 特性 | `config.yaml` | `config.yaml` | `config.yaml` | `config.yaml` |
 | :--- | :--- | :--- | :--- | :--- |
 | **大小** | 8.2 KB | 5.6 KB | 18.7 KB | 4.2 KB |
-| **混合端口** | 7890 | 7890 | 7890 | 7890 |
-| **面板地址** | 127.0.0.1:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 |
-| **运行模式** | rule | rule | Rule | Rule |
-| **TUN** | ✅ | ✅ | 🚫 | ✅ |
-| **策略组** | **20** | **7** | **34** | **3** |
-| **规则数** | **14** | **8** | **38** | **4** |
+| **混合端口** | 7890 | 7890 | N/A | 7890 |
+| **面板地址** | 127.0.0.1:9090 | 0.0.0.0:9090 | N/A | 0.0.0.0:9090 |
+| **运行模式** | rule | rule | 解析失败 | Rule |
+| **TUN** | ✅ | ✅ | ❌ | ✅ |
+| **策略组** | **20** | **7** | **0** | **3** |
+| **规则数** | **14** | **8** | **0** | **4** |
 
 ## 📄 配置详情
 
@@ -91,33 +91,6 @@
 
 #### 📝 config.yaml
 - **路径**: `Surfing/config.yaml` | **大小**: 18.7 KB | [查看源码](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/Mobile_Modules/Surfing/config.yaml)
-- **模式**: Rule | **TUN**: 🚫 | **IPv6**: ✅
-<details>
-<summary>🔍 策略组 (34个)</summary>
-
-| 名称 | 类型 |
-| :--- | :--- |
-| 👆 总模式 | `select` |
-| 👆 订阅更新 | `select` |
-| 👆 小红书 | `select` |
-| 👆 抖音 | `select` |
-| 👆 BiliBili | `select` |
-| 👆 Steam | `select` |
-| 👆 Apple | `select` |
-| 👆 Microsoft | `select` |
-| 👆 Telegram | `select` |
-| 👆 Discord | `select` |
-| 👆 Spotify | `select` |
-| 👆 TikTok | `select` |
-| 👆 YouTube | `select` |
-| 👆 Netflix | `select` |
-| 👆 Google | `select` |
-| 👆 GoogleFCM | `select` |
-| 👆 Facebook | `select` |
-| 👆 OpenAI | `select` |
-| 👆 GitHub | `select` |
-| 👆 Twitter(X) | `select` |
-| ... | 还有 14 个 |
-</details>
+- **模式**: 解析失败 | **TUN**: ❌ | **IPv6**: ❌
 
 ---

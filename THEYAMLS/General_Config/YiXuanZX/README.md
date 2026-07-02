@@ -8,18 +8,4 @@
 
 #### 📝 mihomo.yaml
 - **路径**: `mihomo.yaml` | **大小**: 5.9 KB | [查看源码](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/YiXuanZX/mihomo.yaml)
-- **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
-<details>
-<summary>🔍 策略组 (8个)</summary>
-
-| 名称 | 类型 |
-| :--- | :--- |
-| 👆 香港 | `select` |
-| 👆 新加坡 | `select` |
-| 👆 日本 | `select` |
-| 👆 美国 | `select` |
-| 👆 其他 | `select` |
-| 👆 代理 | `select` |
-| 👆 AI | `select` |
-| 👆 TG | `select` |
-</details>
+- **模式**: 解析失败 | **TUN**: ❌ | **IPv6**: ❌
