@@ -1,6 +1,7 @@
 import os
 import urllib.parse
 import yaml
+from yaml import SafeLoader
 
 # ================= 配置部分 =================
 REPO_URL_BASE = os.getenv("GITHUB_REPOSITORY", "")
@@ -17,7 +18,19 @@ CATEGORIES = {
 IGNORE_FILES = ["README.md", "LICENSE", "release_body.md"]
 # ===========================================
 
-yaml.add_multi_constructor("!", lambda loader, suffix, node: None, Loader=yaml.SafeLoader)
+# 兼容 !自定义标签、&锚点、*别名、单行流式{} 对象
+def ignore_unknown_tag(loader, suffix, node):
+    if isinstance(node, yaml.MappingNode):
+        return loader.construct_mapping(node)
+    elif isinstance(node, yaml.SequenceNode):
+        return loader.construct_sequence(node)
+    else:
+        return loader.construct_scalar(node)
+
+yaml.add_multi_constructor("!", ignore_unknown_tag, Loader=SafeLoader)
+# 放宽锚点解析校验
+SafeLoader.yaml_implicit_resolvers.pop('&', None)
+SafeLoader.yaml_implicit_resolvers.pop('*', None)
 
 def clean_cell(text):
     if text is None: return "N/A"
@@ -33,10 +46,18 @@ def get_size(path):
 def analyze(path):
     """解析单个 YAML 文件并提取关键信息"""
     try:
-        with open(path, "r", encoding="utf-8") as f:
+        # 增加编码容错 errors="replace"
+        with open(path, "r", encoding="utf-8", errors="replace") as f:
             content = f.read().replace("\t", "  ")
+        
+        # 预处理：自动补全yaml文档头 ---，修复首行&锚点报错
+        stripped = content.lstrip()
+        if not stripped.startswith("---"):
+            content = "---\n" + content
+        
         data = yaml.safe_load(content)
-        if not isinstance(data, dict): return None
+        if not isinstance(data, dict):
+            raise ValueError("YAML根节点不是字典")
         
         info = {
             "mode": data.get("mode", "rule"),
@@ -60,7 +81,17 @@ def analyze(path):
         return info
     except Exception as e:
         print(f"⚠️ Parse error {path}: {e}")
-        return None
+        # 解析失败兜底结构，文件不会被过滤，正常统计计数
+        return {
+            "mode": "解析失败",
+            "ipv6": "❌",
+            "tun": "❌",
+            "mixed_port": "N/A",
+            "ext_ctrl": "N/A",
+            "group_count": 0,
+            "rule_count": 0,
+            "groups": []
+        }
 
 def scan_folder(folder):
     """递归扫描文件夹内的所有 YAML 文件"""
@@ -82,8 +113,8 @@ def make_readme(folder, title, files, back_link_text, back_link_url):
     data_map = {}
     for rel, full in files:
         parsed = analyze(full)
-        if parsed:
-            data_map[rel] = {"size": get_size(full), "info": parsed}
+        # 不管解析成功失败，全部存入，不会丢失文件
+        data_map[rel] = {"size": get_size(full), "info": parsed}
 
     if not data_map: return
 
@@ -170,7 +201,7 @@ def process_category(folder, title):
             # 子文件夹的标题使用文件夹名
             sub_title = f"{sub_dir} ({title.split(' ')[0]})"
             # 子文件夹的返回链接指向上一级 (主分类目录)
-            make_readme(sub_path, sub_title, sub_files, "🔙 返回上一级", "../README.md")
+            make_readme(sub_path, sub_title, "🔙 返回上一级", "../README.md")
 
 if __name__ == "__main__":
     for folder, title in CATEGORIES.items():
