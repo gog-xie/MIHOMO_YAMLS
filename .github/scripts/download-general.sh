@@ -71,6 +71,11 @@ https://raw.githubusercontent.com/Accademia/Clash_Configuration_Template/refs/he
 https://raw.githubusercontent.com/Tangerinell/mihomo_rules_profile/refs/heads/master/profile/mihomo.yaml|THEYAMLS/General_Config/Tangerinell/mihomo.yaml
 https://raw.githubusercontent.com/YiXuanZX/rules/refs/heads/main/mihomo.yaml|THEYAMLS/General_Config/YiXuanZX/mihomo.yaml
 https://raw.githubusercontent.com/XVSVTsama/mihomo-config-self/refs/heads/main/mihomo.yaml|THEYAMLS/General_Config/XVSVTSAMA/mihomo.yaml
+https://raw.githubusercontent.com/gog-xie/Mihomo/refs/heads/main/yaml/RuleLite.yaml|THEYAMLS/General_Config/gog-xie/RuleLite.yaml
+https://raw.githubusercontent.com/gog-xie/Mihomo/refs/heads/main/yaml/RuleAIO.yaml|THEYAMLS/General_Config/gog-xie/RuleAIO.yaml
+https://raw.githubusercontent.com/gog-xie/Mihomo/refs/heads/main/yaml/RuleAIOPro.yaml|THEYAMLS/General_Config/gog-xie/RuleAIOPro.yaml
+https://raw.githubusercontent.com/gog-xie/Mihomo/refs/heads/main/yaml/GeoLite.yaml|THEYAMLS/General_Config/gog-xie/GeoLite.yaml
+https://raw.githubusercontent.com/gog-xie/Mihomo/refs/heads/main/yaml/GeoAIO.yaml|THEYAMLS/General_Config/gog-xie/GeoAIO.yaml
 EOF
 )
 
