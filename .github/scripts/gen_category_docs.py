@@ -1,7 +1,8 @@
 import os
+import re
 import urllib.parse
 import yaml
-from yaml import SafeLoader
+from yaml import FullLoader
 
 # ================= 配置部分 =================
 REPO_URL_BASE = os.getenv("GITHUB_REPOSITORY", "")
@@ -27,10 +28,7 @@ def ignore_unknown_tag(loader, suffix, node):
     else:
         return loader.construct_scalar(node)
 
-yaml.add_multi_constructor("!", ignore_unknown_tag, Loader=SafeLoader)
-# 放宽锚点解析校验
-SafeLoader.yaml_implicit_resolvers.pop('&', None)
-SafeLoader.yaml_implicit_resolvers.pop('*', None)
+yaml.add_multi_constructor("!", ignore_unknown_tag, Loader=FullLoader)
 
 def clean_cell(text):
     if text is None: return "N/A"
@@ -50,12 +48,29 @@ def analyze(path):
         with open(path, "r", encoding="utf-8", errors="replace") as f:
             content = f.read().replace("\t", "  ")
         
-        # 预处理：自动补全yaml文档头 ---，修复首行&锚点报错
+        # 预处理1：自动补全yaml文档头 ---
         stripped = content.lstrip()
         if not stripped.startswith("---"):
             content = "---\n" + content
-        
-        data = yaml.safe_load(content)
+
+        # 预处理2：修复 键: &锚点 {xxx} 单行流式映射解析报错
+        # 正则拆分 BaseProvider: &BaseProvider {a:1,b:2} 为多行标准格式
+        anchor_inline_pattern = re.compile(r"(\w+):\s*(&\w+)\s*\{\s*(.*?)\s*\}")
+        def split_anchor_inline(match):
+            key = match.group(1)
+            anchor_name = match.group(2)
+            inline_content = match.group(3)
+            # 拆分成多行标准yaml
+            lines = [f"{key}: {anchor_name}"]
+            if inline_content.strip():
+                items = [i.strip() for i in inline_content.split(",") if i.strip()]
+                for item in items:
+                    lines.append(f"  {item}")
+            return "\n".join(lines)
+        content = anchor_inline_pattern.sub(split_anchor_inline, content)
+
+        # 使用 FullLoader 完整支持锚点、别名、流式对象
+        data = yaml.load(content, Loader=FullLoader)
         if not isinstance(data, dict):
             raise ValueError("YAML根节点不是字典")
         
@@ -145,18 +160,15 @@ def make_readme(folder, title, files, back_link_text, back_link_url):
     # 按照 "子文件夹/作者" 分组显示
     by_author = {}
     for rel, data in data_map.items():
-        # 如果是在子文件夹里生成，这里 author 可能是 '.' 或者文件名本身，逻辑通用
         author = rel.split(os.sep)[0] if os.sep in rel else "Root"
         by_author.setdefault(author, []).append((rel, data))
     
     for author, items in sorted(by_author.items()):
-        # 如果是在根目录生成，显示作者名；如果是在子目录生成(author是Root)，则不显示这一级标题
         if author != "Root":
             lines.extend([f"### 👤 {author}", ""])
             
         for rel, data in items:
             info = data["info"]
-            # 构建 GitHub 源码链接
             url_path = os.path.join(folder, rel).replace(os.sep, '/')
             url = f"{REPO_URL}/{urllib.parse.quote(url_path)}"
             
@@ -180,13 +192,9 @@ def make_readme(folder, title, files, back_link_text, back_link_url):
 def process_category(folder, title):
     if not os.path.isdir(folder): return
 
-    # --- 1. 生成主分类的 README (包含所有子文件) ---
     all_files = scan_folder(folder)
-    # 主分类的返回链接指向项目根目录
     make_readme(folder, title, all_files, "🔙 返回主页", "../../README.md")
 
-    # --- 2. 遍历一级子目录，为每个子目录生成 README ---
-    # 获取第一层子文件夹 (例如: THEYAMLS/General_Config/AuthorA)
     try:
         sub_dirs = [d for d in os.listdir(folder) if os.path.isdir(os.path.join(folder, d)) and not d.startswith('.')]
     except OSError:
@@ -194,11 +202,9 @@ def process_category(folder, title):
 
     for sub_dir in sub_dirs:
         sub_path = os.path.join(folder, sub_dir)
-        # 扫描该子文件夹内的文件
         sub_files = scan_folder(sub_path)
         
         if sub_files:
-            # 修复此处参数顺序错误：必须传入 sub_files 文件列表
             sub_title = f"{sub_dir} ({title.split(' ')[0]})"
             make_readme(sub_path, sub_title, sub_files, "🔙 返回上一级", "../README.md")
 
