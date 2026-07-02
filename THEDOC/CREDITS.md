@@ -22,6 +22,7 @@
 | **MetaCubeX** | Mihomo 官方示例配置 | [Wiki](https://wiki.metacubex.one/example/) |
 | **666OS** | MihomoPro, OneTouch, Smart 系列配置 | [GitHub](https://github.com/666OS/YYDS) |
 | **HenryChiao** | MIHOMO_AIO (ProMax, Plus, Smart 等) | [GitHub](https://github.com/HenryChiao/MIHOMO_AIO) |
+| **gog-xie** | Mihomo_AIO (RuleAIOPro、GeoAIO、Smart等) | [GitHub](https://github.com/gog-xie/Mihomo) |
 | **liandu2024** | Little 整合包 (Fallback, Smart, Dialer) | [GitHub](https://github.com/liandu2024/little) |
 | **Yiteei** | 基础配置 (Redir-host / Fake-ip) | [GitHub](https://github.com/yiteei/Share) |
 | **JohnsonRan** | AIB / AIO 规则整合配置 | [GitHub](https://github.com/JohnsonRan/CRules) |
