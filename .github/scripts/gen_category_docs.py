@@ -198,10 +198,9 @@ def process_category(folder, title):
         sub_files = scan_folder(sub_path)
         
         if sub_files:
-            # 子文件夹的标题使用文件夹名
+            # 修复此处参数顺序错误：必须传入 sub_files 文件列表
             sub_title = f"{sub_dir} ({title.split(' ')[0]})"
-            # 子文件夹的返回链接指向上一级 (主分类目录)
-            make_readme(sub_path, sub_title, "🔙 返回上一级", "../README.md")
+            make_readme(sub_path, sub_title, sub_files, "🔙 返回上一级", "../README.md")
 
 if __name__ == "__main__":
     for folder, title in CATEGORIES.items():
