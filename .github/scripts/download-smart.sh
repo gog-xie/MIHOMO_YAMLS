@@ -16,6 +16,8 @@ https://raw.githubusercontent.com/liandu2024/little/refs/heads/main/yaml/clash-a
 https://raw.githubusercontent.com/liandu2024/little/refs/heads/main/yaml/clash-all-fallback-smart.yaml|THEYAMLS/Smart_Mode/liandu2024/clash-all-fallback-smart.yaml
 https://raw.githubusercontent.com/echs-top/proxy/heads/main/mihomo_smart.yaml|THEYAMLS/Smart_Mode/echs-top/mihomo_smart.yaml
 https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/config/mihomo/smart/smart.yaml|THEYAMLS/Smart_Mode/qichiyuhub/smart.yaml
+https://raw.githubusercontent.com/gog-xie/Mihomo/refs/heads/main/yaml/GeoSmartAIO.yaml|THEYAMLS/Smart_Mode/gog-xie/GeoSmartAIO.yaml
+https://raw.githubusercontent.com/gog-xie/Mihomo/refs/heads/main/yaml/RuleSmartAIO.yaml|THEYAMLS/Smart_Mode/gog-xie/RuleSmartAIO.yaml
 EOF
 )
 
