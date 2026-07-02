@@ -9,12 +9,12 @@
 | 特性 | `config_version2.yaml` | `config.yaml` |
 | :--- | :--- | :--- |
 | **大小** | 30.9 KB | 28.5 KB |
-| **混合端口** | N/A | N/A |
-| **面板地址** | N/A | N/A |
-| **运行模式** | 解析失败 | 解析失败 |
-| **TUN** | ❌ | ❌ |
-| **策略组** | **0** | **0** |
-| **规则数** | **0** | **0** |
+| **混合端口** | N/A | 7893 |
+| **面板地址** | N/A | 127.0.0.1:9090 |
+| **运行模式** | 解析失败 | rule |
+| **TUN** | ❌ | ✅ |
+| **策略组** | **0** | **25** |
+| **规则数** | **0** | **35** |
 
 ## 📄 配置详情
 
@@ -24,4 +24,31 @@
 
 #### 📝 config.yaml
 - **路径**: `config.yaml` | **大小**: 28.5 KB | [查看源码](https://github.com/gog-xie/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Mitchell/config.yaml)
-- **模式**: 解析失败 | **TUN**: ❌ | **IPv6**: ❌
+- **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
+<details>
+<summary>🔍 策略组 (25个)</summary>
+
+| 名称 | 类型 |
+| :--- | :--- |
+| 👆 Proxy | `select` |
+| 👆 AI | `select` |
+| 🔧 AI_稳定节点 | `fallback` |
+| ♻️ AI_自动优选 | `url-test` |
+| ⚖️ 香港均衡加速 | `load-balance` |
+| ⚖️ 美国均衡加速 | `load-balance` |
+| ⚖️ 新加坡均衡加速 | `load-balance` |
+| 🔧 香港故转 | `fallback` |
+| 🔧 美国故转 | `fallback` |
+| 🔧 新加坡故转 | `fallback` |
+| ♻️ 香港自动 | `url-test` |
+| ♻️ 美国自动 | `url-test` |
+| ♻️ 新加坡自动 | `url-test` |
+| ♻️ 自动选择 | `url-test` |
+| 👆 TikTok | `select` |
+| 👆 YouTube | `select` |
+| 👆 Speedtest | `select` |
+| 👆 OneDrive | `select` |
+| 👆 Trackerslist | `select` |
+| 👆 香港节点 | `select` |
+| ... | 还有 5 个 |
+</details>
