@@ -1,6 +1,7 @@
 import os
 import urllib.parse
 import yaml
+import re
 from yaml import SafeLoader
 
 # ================= 配置部分 =================
@@ -32,7 +33,7 @@ def ignore_unknown_tag(loader, suffix, node):
 
 yaml.add_multi_constructor("!", ignore_unknown_tag, Loader=SafeLoader)
 
-# 捕获未定义别名，直接返回空值不抛错
+# 未定义别名直接返回空，不抛解析错误
 def safe_alias_constructor(loader, alias_name):
     return None
 
@@ -53,19 +54,41 @@ def get_size(path):
     except:
         return "Unknown"
 
+def pre_fix_yaml_content(raw_text):
+    # 步骤1：替换中文全角引号
+    txt = raw_text.replace("“", '"').replace("”", '"')
+    # 步骤2：匹配首行 键: &锚点 {xxx} 单行流式对象，拆分多行
+    anchor_flow_re = re.compile(r"^(\w+):\s*(&\w+)\s*\{\s*(.*?)\s*\}")
+    lines = txt.splitlines()
+    new_lines = []
+    for line in lines:
+        match = anchor_flow_re.match(line.strip())
+        if match:
+            k, anchor, inner = match.groups()
+            new_lines.append(f"{k}: {anchor}")
+            if inner.strip():
+                items = [x.strip() for x in inner.split(",") if x.strip()]
+                for item in items:
+                    new_lines.append(f"  {item}")
+        else:
+            new_lines.append(line)
+    txt = "\n".join(new_lines)
+    # 步骤3：强制头部插入标准文档分隔符
+    if not txt.lstrip().startswith("---"):
+        txt = "# Auto Fix Anchor Header\n---\n" + txt
+    return txt
+
 def analyze(path):
-    """多层容错解析，屏蔽所有冗余警告"""
+    """多层预处理+容错解析"""
     try:
         with open(path, "r", encoding="utf-8", errors="replace") as f:
             raw = f.read().replace("\t", "  ")
-        # 预处理：替换全角引号 + 强制补文档头
-        content = raw.replace("“", '"').replace("”", '"')
-        content = "# AutoFix DocHeader\n---\n" + content
-
+        # 多层预处理修复锚点单行语法
+        content = pre_fix_yaml_content(raw)
         data = yaml.safe_load(content)
-        # 区分两种不解析场景：数组规则集、空文件
+
+        # 规则集数组文件单独处理
         if isinstance(data, list):
-            # 规则集文件（redir-host/fake-ip），直接返回极简数据，不打印警告
             return {
                 "mode": "规则集文件",
                 "ipv6": "—",
@@ -73,7 +96,7 @@ def analyze(path):
                 "mixed_port": "—",
                 "ext_ctrl": "—",
                 "group_count": 0,
-                "rule_count": len(data) if isinstance(data, list) else 0,
+                "rule_count": len(data),
                 "groups": []
             }
         if not isinstance(data, dict):
@@ -90,7 +113,7 @@ def analyze(path):
             "groups": []
         }
 
-        # 隔离proxy-groups读取异常
+        # 隔离策略组读取异常
         try:
             groups = data.get("proxy-groups", [])
             if isinstance(groups, list):
@@ -104,18 +127,17 @@ def analyze(path):
         except Exception:
             pass
 
-        # 隔离rules读取异常
+        # 隔离规则读取异常
         try:
             rules = data.get("rules", [])
             if isinstance(rules, list):
                 info["rule_count"] = len(rules)
         except Exception:
             pass
-
         return info
 
     except Exception:
-        # 彻底删除警告打印，不再输出日志
+        # 不打印警告日志，仅兜底展示
         return {
             "mode": "解析失败",
             "ipv6": "❌",
