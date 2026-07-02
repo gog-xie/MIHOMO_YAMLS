@@ -1,6 +1,6 @@
 # OpenClash 覆写模块 - Clashmi.yaml
-# 生成日期：2026-06-19
-# 源文件：https://raw.githubusercontent.com/HenryChiao/MIHOMO_YAMLS/main/THEYAMLS/General_Config/bgpeer/Clashmi.yaml
+# 生成日期：2026-07-02
+# 源文件：https://raw.githubusercontent.com/gog-xie/MIHOMO_YAMLS/main/THEYAMLS/General_Config/bgpeer/Clashmi.yaml
 # 格式：新版 OpenClash [YAML] 块覆写
 #
 # 本文件仅包含 [YAML] 块覆写内容，不含任何 [General] 插件设置。
@@ -91,7 +91,6 @@
 #     interval: 3600
 #     override:
 #       additional-prefix: ¹
-#     proxy: 🌍全球加速
 #     type: http
 #     url: '#机场订阅'
 #   机场2:
@@ -99,7 +98,6 @@
 #     interval: 3600
 #     override:
 #       additional-prefix: ²
-#     proxy: 🌍全球加速
 #     type: http
 #     url: '#机场订阅'
 #   机场3:
@@ -107,7 +105,6 @@
 #     interval: 3600
 #     override:
 #       additional-prefix: ³
-#     proxy: 🌍全球加速
 #     type: http
 #     url: '#机场订阅'
 
@@ -122,12 +119,13 @@
 # proxy-groups:
 # - exclude-type: direct
 #   filter: .*
-#   icon: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/icons/main/color/global.png
+#   icon: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/icons/main/color/global_1.png
 #   include-all: true
 #   interval: 120
 #   name: 🌍全球加速
 #   proxies:
 #   - ♻️全部随机
+#   - 🔗链式出口
 #   - 🇭🇰香港随机
 #   - 🇹🇼台湾随机
 #   - 🇯🇵日本随机
@@ -144,6 +142,7 @@
 #   name: 🎷抖音
 #   proxies: &id001
 #   - 🌍全球加速
+#   - 🔗链式出口
 #   - ♻️全部随机
 #   - 🇭🇰香港随机
 #   - 🇹🇼台湾随机
@@ -190,7 +189,7 @@
 #   type: select
 # - exclude-type: direct
 #   filter: .*
-#   icon: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/icons/main/color/paypal.png
+#   icon: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/icons/main/color/paypal_1.png
 #   include-all: true
 #   name: 💳PayPal
 #   proxies: *id001
@@ -211,6 +210,20 @@
 #   type: select
 # - exclude-type: direct
 #   filter: .*
+#   icon: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/icons/main/color/x.png
+#   include-all: true
+#   name: 🐦X
+#   proxies: *id001
+#   type: select
+# - exclude-type: direct
+#   filter: .*
+#   icon: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/icons/main/color/netflix.png
+#   include-all: true
+#   name: 📽️Netflix
+#   proxies: *id001
+#   type: select
+# - exclude-type: direct
+#   filter: .*
 #   icon: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/icons/main/color/github.png
 #   include-all: true
 #   name: 😈GitHub
@@ -224,6 +237,7 @@
 #   proxies: &id002
 #   - 🎯直连
 #   - 🌍全球加速
+#   - 🔗链式出口
 #   - ♻️全部随机
 #   - 🇭🇰香港随机
 #   - 🇹🇼台湾随机
@@ -273,11 +287,42 @@
 #   - 🌍全球加速
 #   type: select
 #   url: http://connect.rom.miui.com/generate_204
-# - icon: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/icons/main/color/match.png
+# - icon: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/icons/main/color/match_1.png
 #   name: 🤡漏网之鱼
 #   proxies:
 #   - 🌍全球加速
 #   - 🎯直连
+#   type: select
+# - exclude-type: direct
+#   filter: .*
+#   icon: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/icons/main/color/chainexport.png
+#   include-all: true
+#   name: 🔗链式出口
+#   override:
+#     dialer-proxy: 🔗链式中转
+#   proxies:
+#   - ♻️全部随机
+#   - 🇭🇰香港随机
+#   - 🇹🇼台湾随机
+#   - 🇯🇵日本随机
+#   - 🇸🇬新加坡随机
+#   - 🇰🇷韩国随机
+#   - 🇺🇸美国随机
+#   type: select
+# - exclude-type: direct
+#   filter: .*
+#   icon: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/icons/main/color/chaintransfer.png
+#   include-all: true
+#   name: 🔗链式中转
+#   proxies:
+#   - 🌍全球加速
+#   - ♻️全部随机
+#   - 🇭🇰香港随机
+#   - 🇹🇼台湾随机
+#   - 🇯🇵日本随机
+#   - 🇸🇬新加坡随机
+#   - 🇰🇷韩国随机
+#   - 🇺🇸美国随机
 #   type: select
 # - exclude-type: direct
 #   filter: 🇭🇰|HK|Hong|hong|香港|深港|沪港|京港|港
@@ -397,11 +442,11 @@
 #     type: http
 #     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/category-cryptocurrency.mrs
 #   Facebook-zj:
-#     behavior: classical
-#     format: yaml
+#     behavior: domain
+#     format: mrs
 #     interval: 86400
 #     type: http
-#     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/meta.yaml
+#     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/meta.mrs
 #   GitHub-zj:
 #     behavior: domain
 #     format: mrs
@@ -420,6 +465,12 @@
 #     interval: 86400
 #     type: http
 #     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/microsoft.mrs
+#   Netflix:
+#     behavior: classical
+#     format: yaml
+#     interval: 86400
+#     type: http
+#     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/netflix.yaml
 #   OpenAI-zj:
 #     behavior: classical
 #     format: yaml
@@ -450,18 +501,6 @@
 #     interval: 86400
 #     type: http
 #     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/tiktok.yaml
-#   WildRift-zj:
-#     behavior: classical
-#     format: yaml
-#     interval: 86400
-#     type: http
-#     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/wildrift.yaml
-#   YouTube:
-#     behavior: domain
-#     format: mrs
-#     interval: 86400
-#     type: http
-#     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/youtube.mrs
 #   bilibili:
 #     behavior: domain
 #     format: mrs
@@ -505,11 +544,11 @@
 #     type: http
 #     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geoip/fastly.mrs
 #   games-!cn:
-#     behavior: domain
-#     format: mrs
+#     behavior: classical
+#     format: yaml
 #     interval: 86400
 #     type: http
-#     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/category-games-!cn.mrs
+#     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/category-games-!cn.yaml
 #   games-cn:
 #     behavior: domain
 #     format: mrs
@@ -564,12 +603,6 @@
 #     interval: 86400
 #     type: http
 #     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/category-ads-all.mrs
-#   telegram-ip:
-#     behavior: ipcidr
-#     format: mrs
-#     interval: 86400
-#     type: http
-#     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geoip/telegram.mrs
 #   twitter:
 #     behavior: domain
 #     format: mrs
@@ -577,11 +610,11 @@
 #     type: http
 #     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/twitter.mrs
 #   xiaohongshu:
-#     behavior: classical
-#     format: yaml
+#     behavior: domain
+#     format: mrs
 #     interval: 86400
 #     type: http
-#     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/xiaohongshu.yaml
+#     url: https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/xiaohongshu.mrs
 
 # ==========================================================
 # rules（从源文件直接提取）
@@ -602,11 +635,9 @@
 # - RULE-SET,Claude-zj,🤖Claude
 # - RULE-SET,PayPal,💳PayPal
 # - RULE-SET,Cryptocurrency,💰加密货币
-# - RULE-SET,WildRift-zj,🎮国际游戏
 # - RULE-SET,games-!cn,🎮国际游戏
 # - RULE-SET,Telegram-zj,💻Telegram
-# - RULE-SET,telegram-ip,💻Telegram,no-resolve
-# - RULE-SET,YouTube,🌐Google服务
+# - RULE-SET,Netflix,📽️Netflix
 # - RULE-SET,Google-zj,🌐Google服务
 # - RULE-SET,google-ip,🌐Google服务,no-resolve
 # - RULE-SET,Facebook-zj,📱Meta
@@ -614,7 +645,7 @@
 # - RULE-SET,Microsoft,😊微软服务
 # - RULE-SET,icloud,🍎苹果服务
 # - RULE-SET,Apple,🍎苹果服务
-# - RULE-SET,twitter,🌍全球加速
+# - RULE-SET,twitter,🐦X
 # - RULE-SET,cloudflare-ip,🌍全球加速,no-resolve
 # - RULE-SET,cloudfront-ip,🌍全球加速,no-resolve
 # - RULE-SET,fastly-ip,🌍全球加速,no-resolve
@@ -696,13 +727,12 @@
 #     rule-set:GitHub-zj: *id001
 #     rule-set:Google-zj: *id001
 #     rule-set:Microsoft: *id001
+#     rule-set:Netflix: *id001
 #     rule-set:OpenAI-zj: *id001
 #     rule-set:PayPal: *id001
 #     rule-set:Telegram-zj: *id001
 #     rule-set:Tencent: *id002
 #     rule-set:TikTok-zj: *id001
-#     rule-set:WildRift-zj: *id001
-#     rule-set:YouTube: *id001
 #     rule-set:bilibili: *id002
 #     rule-set:cn-domain: *id002
 #     rule-set:douyin-zj: *id002

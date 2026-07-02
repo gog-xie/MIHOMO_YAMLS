@@ -33,10 +33,12 @@
 | 📁 **[General_Config/Seven1echo](./General_Config/Seven1echo/README.md)** | 2 个 |
 | 📁 **[General_Config/Sgraqwq](./General_Config/Sgraqwq/README.md)** | 1 个 |
 | 📁 **[General_Config/Tangerinell](./General_Config/Tangerinell/README.md)** | 1 个 |
+| 📁 **[General_Config/YiXuanZX](./General_Config/YiXuanZX/README.md)** | 1 个 |
 | 📁 **[General_Config/ameyukisora](./General_Config/ameyukisora/README.md)** | 1 个 |
 | 📁 **[General_Config/bgpeer](./General_Config/bgpeer/README.md)** | 1 个 |
 | 📁 **[General_Config/echs-top](./General_Config/echs-top/README.md)** | 1 个 |
 | 📁 **[General_Config/fufu](./General_Config/fufu/README.md)** | 1 个 |
+| 📁 **[General_Config/gog-xie](./General_Config/gog-xie/README.md)** | 3 个 |
 | 📁 **[General_Config/iKeLee](./General_Config/iKeLee/README.md)** | 2 个 |
 | 📁 **[General_Config/liandu2024](./General_Config/liandu2024/README.md)** | 5 个 |
 | 📁 **[General_Config/liuran001](./General_Config/liuran001/README.md)** | 1 个 |
@@ -54,6 +56,7 @@
 | 📁 **[Smart_Mode/HenryChiao](./Smart_Mode/HenryChiao/README.md)** | 4 个 |
 | 📁 **[Smart_Mode/echs-top](./Smart_Mode/echs-top/README.md)** | 1 个 |
 | 📁 **[Smart_Mode/edison](./Smart_Mode/edison/README.md)** | 1 个 |
+| 📁 **[Smart_Mode/gog-xie](./Smart_Mode/gog-xie/README.md)** | 2 个 |
 | 📁 **[Smart_Mode/liandu2024](./Smart_Mode/liandu2024/README.md)** | 3 个 |
 | 📁 **[Smart_Mode/qichiyuhub](./Smart_Mode/qichiyuhub/README.md)** | 1 个 |
 
