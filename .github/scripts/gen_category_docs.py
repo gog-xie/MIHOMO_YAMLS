@@ -1,7 +1,6 @@
 import os
 import urllib.parse
 import yaml
-import re
 from yaml import SafeLoader
 
 # ================= 配置部分 =================
@@ -19,7 +18,7 @@ CATEGORIES = {
 IGNORE_FILES = ["README.md", "LICENSE", "release_body.md"]
 # ===========================================
 
-# 忽略未知 !标签
+# 忽略未知 !自定义标签
 def ignore_unknown_tag(loader, suffix, node):
     try:
         if isinstance(node, yaml.MappingNode):
@@ -33,17 +32,19 @@ def ignore_unknown_tag(loader, suffix, node):
 
 yaml.add_multi_constructor("!", ignore_unknown_tag, Loader=SafeLoader)
 
-# 未定义别名直接返回空，不抛解析错误
+# 遇到未定义别名直接返回空，阻断报错
 def safe_alias_constructor(loader, alias_name):
     return None
 
 SafeLoader.alias_constructor = safe_alias_constructor
+# 放宽锚点/别名隐式解析限制
 SafeLoader.yaml_implicit_resolvers.pop('&', None)
 SafeLoader.yaml_implicit_resolvers.pop('*', None)
 
 def clean_cell(text):
     if text is None: return "N/A"
     s = str(text).replace("|", "&#124;").replace("\n", " ").strip() or "N/A"
+    # 清除中文全角引号
     s = s.replace("“", '"').replace("”", '"')
     return s
 
@@ -54,40 +55,21 @@ def get_size(path):
     except:
         return "Unknown"
 
-def pre_fix_yaml_content(raw_text):
-    # 步骤1：替换中文全角引号
-    txt = raw_text.replace("“", '"').replace("”", '"')
-    # 步骤2：匹配首行 键: &锚点 {xxx} 单行流式对象，拆分多行
-    anchor_flow_re = re.compile(r"^(\w+):\s*(&\w+)\s*\{\s*(.*?)\s*\}")
-    lines = txt.splitlines()
-    new_lines = []
-    for line in lines:
-        match = anchor_flow_re.match(line.strip())
-        if match:
-            k, anchor, inner = match.groups()
-            new_lines.append(f"{k}: {anchor}")
-            if inner.strip():
-                items = [x.strip() for x in inner.split(",") if x.strip()]
-                for item in items:
-                    new_lines.append(f"  {item}")
-        else:
-            new_lines.append(line)
-    txt = "\n".join(new_lines)
-    # 步骤3：强制头部插入标准文档分隔符
-    if not txt.lstrip().startswith("---"):
-        txt = "# Auto Fix Anchor Header\n---\n" + txt
-    return txt
-
 def analyze(path):
-    """多层预处理+容错解析"""
+    """极简稳定解析逻辑，去掉复杂正则改写避免大面积崩溃"""
     try:
         with open(path, "r", encoding="utf-8", errors="replace") as f:
             raw = f.read().replace("\t", "  ")
-        # 多层预处理修复锚点单行语法
-        content = pre_fix_yaml_content(raw)
+        
+        # 仅做2处安全预处理，不修改原有行结构，杜绝改写破坏语法
+        content = raw.replace("“", '"').replace("”", '"')
+        stripped_text = content.lstrip()
+        if not stripped_text.startswith("---"):
+            content = "---\n" + content
+
         data = yaml.safe_load(content)
 
-        # 规则集数组文件单独处理
+        # 判断规则集数组文件
         if isinstance(data, list):
             return {
                 "mode": "规则集文件",
@@ -99,9 +81,11 @@ def analyze(path):
                 "rule_count": len(data),
                 "groups": []
             }
+        # 非字典直接抛出
         if not isinstance(data, dict):
             raise ValueError("根节点非字典")
         
+        # 读取顶层基础字段
         info = {
             "mode": data.get("mode", "rule"),
             "ipv6": "✅" if str(data.get("ipv6", False)).lower() == "true" else "🚫",
@@ -113,7 +97,7 @@ def analyze(path):
             "groups": []
         }
 
-        # 隔离策略组读取异常
+        # 单独捕获proxy-groups读取异常，不影响整体返回
         try:
             groups = data.get("proxy-groups", [])
             if isinstance(groups, list):
@@ -127,17 +111,18 @@ def analyze(path):
         except Exception:
             pass
 
-        # 隔离规则读取异常
+        # 单独捕获rules读取异常
         try:
             rules = data.get("rules", [])
             if isinstance(rules, list):
                 info["rule_count"] = len(rules)
         except Exception:
             pass
+
         return info
 
     except Exception:
-        # 不打印警告日志，仅兜底展示
+        # 异常直接返回兜底数据，无日志输出
         return {
             "mode": "解析失败",
             "ipv6": "❌",
