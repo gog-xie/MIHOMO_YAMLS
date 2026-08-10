@@ -49,7 +49,7 @@
 | 📁 **[Smart_Mode/HenryChiao](./Smart_Mode/HenryChiao/README.md)** | 4 个 | [点击浏览详细列表](./Smart_Mode/HenryChiao/README.md) |
 | 📁 **[Smart_Mode/echs-top](./Smart_Mode/echs-top/README.md)** | 1 个 | [点击浏览详细列表](./Smart_Mode/echs-top/README.md) |
 | 📁 **[Smart_Mode/edison](./Smart_Mode/edison/README.md)** | 1 个 | [点击浏览详细列表](./Smart_Mode/edison/README.md) |
-| 📁 **[Smart_Mode/gogyt](./Smart_Mode/gogyt/README.md)** | 1 个 | [点击浏览详细列表](./Smart_Mode/gogyt/README.md) |
+| 📁 **[Smart_Mode/gogyt](./Smart_Mode/gogyt/README.md)** | 2 个 | [点击浏览详细列表](./Smart_Mode/gogyt/README.md) |
 | 📁 **[Smart_Mode/liandu2024](./Smart_Mode/liandu2024/README.md)** | 3 个 | [点击浏览详细列表](./Smart_Mode/liandu2024/README.md) |
 | 📁 **[Smart_Mode/qichiyuhub](./Smart_Mode/qichiyuhub/README.md)** | 1 个 | [点击浏览详细列表](./Smart_Mode/qichiyuhub/README.md) |
 

@@ -4,7 +4,8 @@
 
 | 配置文件 (.conf) | 需要填写的订阅源 (Provider) | 操作 |
 | :--- | :--- | :--- |
-| **RuleSmart.conf** | `$EN_KEY1`: 良心云<br>`$EN_KEY2`: 牛逼云 | [查看源码](https://raw.githubusercontent.com/gogyt/MIHOMO_YAMLS/main/Overwrite/THEOPENCLASH/Smart_Mode/gogyt/RuleSmart.conf) |
+| **GeoSmart.conf** | `$EN_KEY1`: Airport1<br>`$EN_KEY2`: Airport2 | [查看源码](https://raw.githubusercontent.com/gogyt/MIHOMO_YAMLS/main/Overwrite/THEOPENCLASH/Smart_Mode/gogyt/GeoSmart.conf) |
+| **RuleSmart.conf** | `$EN_KEY1`: Airport1<br>`$EN_KEY2`: Airport2 | [查看源码](https://raw.githubusercontent.com/gogyt/MIHOMO_YAMLS/main/Overwrite/THEOPENCLASH/Smart_Mode/gogyt/RuleSmart.conf) |
 
 ---
 [🔙 返回总览](../README.md)
