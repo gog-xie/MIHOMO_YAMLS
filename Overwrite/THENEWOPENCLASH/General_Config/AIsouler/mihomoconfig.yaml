@@ -1,5 +1,5 @@
 # OpenClash 覆写模块 - mihomoconfig.yaml
-# 生成日期：2026-08-07
+# 生成日期：2026-08-10
 # 源文件：https://raw.githubusercontent.com/gogyt/MIHOMO_YAMLS/main/THEYAMLS/General_Config/AIsouler/mihomoconfig.yaml
 # 格式：新版 OpenClash [YAML] 块覆写
 #
@@ -85,7 +85,7 @@
 # proxy-providers:
 #   provider1:
 #     age-secret-key: ''
-#     exclude-filter: (?i)(群|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|提示|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|邀请|好友|失联|选择|剩余|公益|发布|DIZTNA|通路|登录|定时|渠道|牢记|永久|余额|阁下|本站|刷新|导航|建议|重置|以下|⚠️|@|expire|http|com|traffic)
+#     exclude-filter: (?i)(群|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|提示|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|邀请|好友|失联|选择|剩余|公益|发布|DIZTNA|通路|登录|定时|渠道|牢记|永久|余额|阁下|本站|刷新|导航|建议|重置|以下|⚠️|@|\bexpire\b|\bhttps?:\/\/|\.com|\btraffic\b)
 #     health-check:
 #       enable: true
 #       interval: 600
@@ -386,7 +386,7 @@
 #   type: select
 #   url: https://connectivitycheck.platform.hicloud.com/generate_204
 # - empty-fallback: REJECT
-#   filter: (?i)(🇭🇰|香港|(?<![A-Za-z])HK(?![A-Za-z])|hong\s*kong)
+#   filter: (?i)(🇭🇰|香港|(?<![A-Za-z])HKG?(?![A-Za-z])|hong\s*kong)
 #   icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png
 #   include-all: true
 #   interval: 600
@@ -400,7 +400,7 @@
 #   url: https://g.cn/generate_204
 # - empty-fallback: REJECT
 #   exclude-type: DIRECT
-#   filter: (?i)(🇭🇰|香港|(?<![A-Za-z])HK(?![A-Za-z])|hong\s*kong)
+#   filter: (?i)(🇭🇰|香港|(?<![A-Za-z])HKG?(?![A-Za-z])|hong\s*kong)
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
 #   include-all: true
@@ -413,7 +413,7 @@
 #   type: url-test
 #   url: https://g.cn/generate_204
 # - empty-fallback: REJECT
-#   filter: (?i)(🇯🇵|日本|(?<![A-Za-z])JP(?![A-Za-z])|japan)
+#   filter: (?i)(🇯🇵|日本|(?<![A-Za-z])JPN?(?![A-Za-z])|japan)
 #   icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png
 #   include-all: true
 #   interval: 600
@@ -427,7 +427,7 @@
 #   url: https://g.cn/generate_204
 # - empty-fallback: REJECT
 #   exclude-type: DIRECT
-#   filter: (?i)(🇯🇵|日本|(?<![A-Za-z])JP(?![A-Za-z])|japan)
+#   filter: (?i)(🇯🇵|日本|(?<![A-Za-z])JPN?(?![A-Za-z])|japan)
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
 #   include-all: true
@@ -440,7 +440,7 @@
 #   type: url-test
 #   url: https://g.cn/generate_204
 # - empty-fallback: REJECT
-#   filter: (?i)(🇺🇸|美国|(?<![A-Za-z])US(?![A-Za-z])|america|united\s*states)
+#   filter: (?i)(🇺🇸|美国|(?<![A-Za-z])USA?(?![A-Za-z])|america|united\s*states)
 #   icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
 #   include-all: true
 #   interval: 600
@@ -454,7 +454,7 @@
 #   url: https://g.cn/generate_204
 # - empty-fallback: REJECT
 #   exclude-type: DIRECT
-#   filter: (?i)(🇺🇸|美国|(?<![A-Za-z])US(?![A-Za-z])|america|united\s*states)
+#   filter: (?i)(🇺🇸|美国|(?<![A-Za-z])USA?(?![A-Za-z])|america|united\s*states)
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
 #   include-all: true
@@ -467,7 +467,7 @@
 #   type: url-test
 #   url: https://g.cn/generate_204
 # - empty-fallback: REJECT
-#   filter: (?i)(🇸🇬|新加坡|狮城|(?<![A-Za-z])SG(?![A-Za-z])|singapore)
+#   filter: (?i)(🇸🇬|新加坡|狮城|(?<![A-Za-z])SGP?(?![A-Za-z])|singapore)
 #   icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png
 #   include-all: true
 #   interval: 600
@@ -481,7 +481,7 @@
 #   url: https://g.cn/generate_204
 # - empty-fallback: REJECT
 #   exclude-type: DIRECT
-#   filter: (?i)(🇸🇬|新加坡|狮城|(?<![A-Za-z])SG(?![A-Za-z])|singapore)
+#   filter: (?i)(🇸🇬|新加坡|狮城|(?<![A-Za-z])SGP?(?![A-Za-z])|singapore)
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
 #   include-all: true
@@ -494,7 +494,7 @@
 #   type: url-test
 #   url: https://g.cn/generate_204
 # - empty-fallback: REJECT
-#   filter: (?i)(🇹🇼|台湾|(?<![A-Za-z])TW(?![A-Za-z])|taiwan)
+#   filter: (?i)(🇹🇼|台湾|(?<![A-Za-z])TWN?(?![A-Za-z])|taiwan)
 #   icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png
 #   include-all: true
 #   interval: 600
@@ -508,7 +508,7 @@
 #   url: https://g.cn/generate_204
 # - empty-fallback: REJECT
 #   exclude-type: DIRECT
-#   filter: (?i)(🇹🇼|台湾|(?<![A-Za-z])TW(?![A-Za-z])|taiwan)
+#   filter: (?i)(🇹🇼|台湾|(?<![A-Za-z])TWN?(?![A-Za-z])|taiwan)
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
 #   include-all: true
@@ -575,7 +575,7 @@
 #   type: url-test
 #   url: https://g.cn/generate_204
 # - empty-fallback: REJECT
-#   exclude-filter: (?i)(🇭🇰|香港|(?<![A-Za-z])HK(?![A-Za-z])|hong\s*kong|🇯🇵|日本|(?<![A-Za-z])JP(?![A-Za-z])|japan|🇺🇸|美国|(?<![A-Za-z])US(?![A-Za-z])|america|united\s*states|🇸🇬|新加坡|狮城|(?<![A-Za-z])SG(?![A-Za-z])|singapore|🇹🇼|台湾|(?<![A-Za-z])TW(?![A-Za-z])|taiwan)
+#   exclude-filter: (?i)(🇭🇰|香港|(?<![A-Za-z])HKG?(?![A-Za-z])|hong\s*kong|🇯🇵|日本|(?<![A-Za-z])JPN?(?![A-Za-z])|japan|🇺🇸|美国|(?<![A-Za-z])USA?(?![A-Za-z])|america|united\s*states|🇸🇬|新加坡|狮城|(?<![A-Za-z])SGP?(?![A-Za-z])|singapore|🇹🇼|台湾|(?<![A-Za-z])TWN?(?![A-Za-z])|taiwan)
 #   exclude-type: DIRECT
 #   icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png
 #   include-all: true
@@ -589,7 +589,7 @@
 #   type: select
 #   url: https://g.cn/generate_204
 # - empty-fallback: REJECT
-#   exclude-filter: (?i)(🇭🇰|香港|(?<![A-Za-z])HK(?![A-Za-z])|hong\s*kong|🇯🇵|日本|(?<![A-Za-z])JP(?![A-Za-z])|japan|🇺🇸|美国|(?<![A-Za-z])US(?![A-Za-z])|america|united\s*states|🇸🇬|新加坡|狮城|(?<![A-Za-z])SG(?![A-Za-z])|singapore|🇹🇼|台湾|(?<![A-Za-z])TW(?![A-Za-z])|taiwan)
+#   exclude-filter: (?i)(🇭🇰|香港|(?<![A-Za-z])HKG?(?![A-Za-z])|hong\s*kong|🇯🇵|日本|(?<![A-Za-z])JPN?(?![A-Za-z])|japan|🇺🇸|美国|(?<![A-Za-z])USA?(?![A-Za-z])|america|united\s*states|🇸🇬|新加坡|狮城|(?<![A-Za-z])SGP?(?![A-Za-z])|singapore|🇹🇼|台湾|(?<![A-Za-z])TWN?(?![A-Za-z])|taiwan)
 #   exclude-type: DIRECT
 #   hidden: true
 #   icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
@@ -961,7 +961,6 @@
 #
 # rules:
 # - RULE-SET,private,直连
-# - RULE-SET,private_ip,直连,no-resolve
 # - RULE-SET,games_cn,直连
 # - RULE-SET,epicgames,直连
 # - RULE-SET,nvidia_cn,直连
@@ -1013,6 +1012,7 @@
 # - RULE-SET,gfw,默认代理
 # - RULE-SET,geolocation-cn,直连
 # - RULE-SET,cn_ip,直连
+# - RULE-SET,private_ip,直连
 # - MATCH,漏网之鱼
 
 # ==========================================================
