@@ -313,7 +313,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/Giveupmoon/Clash_Rules_Yaml/main/Icon/HOMOMIX/Color/Large/Taiwan_Province.png"
 
   - name: 全球直连
-    type: url-test
+    type: select
     proxies:
       - DIRECT
     icon: "https://raw.githubusercontent.com/Giveupmoon/Clash_Rules_Yaml/main/Icon/HOMOMIX/Color/Large/DIRECT.png"
