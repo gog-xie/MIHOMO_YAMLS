@@ -6,20 +6,20 @@
 
 ## ⚔️ 配置横向对比
 
-| 特性 | `RuleSmart.yaml` | `GeoSmart.yaml` |
+| 特性 | `GeoSmart.yaml` | `RuleSmart.yaml` |
 | :--- | :--- | :--- |
-| **大小** | 43.4 KB | 35.0 KB |
+| **大小** | 37.1 KB | 45.2 KB |
 | **混合端口** | 7893 | 7893 |
 | **面板地址** | 0.0.0.0:9090 | 0.0.0.0:9090 |
 | **运行模式** | rule | rule |
 | **TUN** | ✅ | ✅ |
 | **策略组** | **69** | **69** |
-| **规则数** | **61** | **60** |
+| **规则数** | **60** | **61** |
 
 ## 📄 配置详情
 
-#### 📝 RuleSmart.yaml
-- **路径**: `RuleSmart.yaml` | **大小**: 43.4 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/Smart_Mode/gogyt/RuleSmart.yaml)
+#### 📝 GeoSmart.yaml
+- **路径**: `GeoSmart.yaml` | **大小**: 37.1 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/Smart_Mode/gogyt/GeoSmart.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (69个)</summary>
@@ -49,8 +49,8 @@
 | ... | 还有 49 个 |
 </details>
 
-#### 📝 GeoSmart.yaml
-- **路径**: `GeoSmart.yaml` | **大小**: 35.0 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/Smart_Mode/gogyt/GeoSmart.yaml)
+#### 📝 RuleSmart.yaml
+- **路径**: `RuleSmart.yaml` | **大小**: 45.2 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/Smart_Mode/gogyt/RuleSmart.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (69个)</summary>

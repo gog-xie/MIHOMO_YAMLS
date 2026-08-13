@@ -6,17 +6,48 @@
 
 ## ⚔️ 配置横向对比
 
-| 特性 | `OneTouch.yaml` | `Lite_cn.yaml` | `Pro_en.yaml` | `MihomoPro.yaml` | `Lite_en.yaml` | `Pro_cn.yaml` | `Mini_cn.yaml` | `Mini_en.yaml` |
+| 特性 | `Pro_cn.yaml` | `OneTouch.yaml` | `MihomoPro.yaml` | `Lite_cn.yaml` | `Pro_en.yaml` | `Lite_en.yaml` | `Mini_en.yaml` | `Mini_cn.yaml` |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **大小** | 12.1 KB | 11.8 KB | 15.4 KB | 22.2 KB | 11.0 KB | 16.4 KB | 4.9 KB | 4.7 KB |
+| **大小** | 16.4 KB | 12.1 KB | 22.2 KB | 11.8 KB | 15.4 KB | 11.0 KB | 4.7 KB | 4.9 KB |
 | **混合端口** | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 |
 | **面板地址** | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 |
 | **运行模式** | rule | rule | rule | rule | rule | rule | rule | rule |
 | **TUN** | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 |
-| **策略组** | **14** | **18** | **37** | **51** | **18** | **37** | **3** | **3** |
-| **规则数** | **22** | **21** | **29** | **39** | **20** | **29** | **7** | **7** |
+| **策略组** | **37** | **14** | **51** | **18** | **37** | **18** | **3** | **3** |
+| **规则数** | **29** | **22** | **39** | **21** | **29** | **20** | **7** | **7** |
 
 ## 📄 配置详情
+
+#### 📝 Pro_cn.yaml
+- **路径**: `Pro_cn.yaml` | **大小**: 16.4 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/Pro_cn.yaml)
+- **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
+<details>
+<summary>🔍 策略组 (37个)</summary>
+
+| 名称 | 类型 |
+| :--- | :--- |
+| 👆 广告拦截 | `select` |
+| 👆 网络测试 | `select` |
+| 👆 即时通讯 | `select` |
+| 👆 社交平台 | `select` |
+| 👆 人工智能 | `select` |
+| 👆 开发服务 | `select` |
+| 👆 EMBY | `select` |
+| 👆 国际媒体 | `select` |
+| 👆 游戏平台 | `select` |
+| 👆 货币平台 | `select` |
+| 👆 谷歌服务 | `select` |
+| 👆 脸书服务 | `select` |
+| 👆 微软服务 | `select` |
+| 👆 苹果服务 | `select` |
+| 👆 国外流量 | `select` |
+| 👆 国内流量 | `select` |
+| 👆 漏网之鱼 | `select` |
+| 🔧 故障转移 | `fallback` |
+| 👆 全球手动 | `select` |
+| 👆 香港策略 | `select` |
+| ... | 还有 17 个 |
+</details>
 
 #### 📝 OneTouch.yaml
 - **路径**: `OneTouch.yaml` | **大小**: 12.1 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/OneTouch.yaml)
@@ -40,6 +71,37 @@
 | ♻️ 韩国自动 | `url-test` |
 | ♻️ 美国自动 | `url-test` |
 | ♻️ 欧洲自动 | `url-test` |
+</details>
+
+#### 📝 MihomoPro.yaml
+- **路径**: `MihomoPro.yaml` | **大小**: 22.2 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/MihomoPro.yaml)
+- **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
+<details>
+<summary>🔍 策略组 (51个)</summary>
+
+| 名称 | 类型 |
+| :--- | :--- |
+| 👆 默认代理 | `select` |
+| 👆 国外流量 | `select` |
+| 👆 国内流量 | `select` |
+| 👆 兜底流量 | `select` |
+| 👆 直接连接 | `select` |
+| 👆 网络测试 | `select` |
+| 👆 抖快书定位 | `select` |
+| 👆 Emby服 | `select` |
+| 👆 油管视频 | `select` |
+| 👆 奈飞视频 | `select` |
+| 👆 国际媒体 | `select` |
+| 👆 新闻媒体 | `select` |
+| 👆 电报消息 | `select` |
+| 👆 推特社交 | `select` |
+| 👆 社交平台 | `select` |
+| 👆 人工智能 | `select` |
+| 👆 货币平台 | `select` |
+| 👆 游戏平台 | `select` |
+| 👆 微软服务 | `select` |
+| 👆 谷歌服务 | `select` |
+| ... | 还有 31 个 |
 </details>
 
 #### 📝 Lite_cn.yaml
@@ -101,37 +163,6 @@
 | ... | 还有 17 个 |
 </details>
 
-#### 📝 MihomoPro.yaml
-- **路径**: `MihomoPro.yaml` | **大小**: 22.2 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/MihomoPro.yaml)
-- **模式**: rule | **TUN**: 🚫 | **IPv6**: ✅
-<details>
-<summary>🔍 策略组 (51个)</summary>
-
-| 名称 | 类型 |
-| :--- | :--- |
-| 👆 默认代理 | `select` |
-| 👆 国外流量 | `select` |
-| 👆 国内流量 | `select` |
-| 👆 兜底流量 | `select` |
-| 👆 直接连接 | `select` |
-| 👆 网络测试 | `select` |
-| 👆 抖快书定位 | `select` |
-| 👆 Emby服 | `select` |
-| 👆 油管视频 | `select` |
-| 👆 奈飞视频 | `select` |
-| 👆 国际媒体 | `select` |
-| 👆 新闻媒体 | `select` |
-| 👆 电报消息 | `select` |
-| 👆 推特社交 | `select` |
-| 👆 社交平台 | `select` |
-| 👆 人工智能 | `select` |
-| 👆 货币平台 | `select` |
-| 👆 游戏平台 | `select` |
-| 👆 微软服务 | `select` |
-| 👆 谷歌服务 | `select` |
-| ... | 还有 31 个 |
-</details>
-
 #### 📝 Lite_en.yaml
 - **路径**: `Lite_en.yaml` | **大小**: 11.0 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/Lite_en.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
@@ -160,35 +191,17 @@
 | ♻️ US | `url-test` |
 </details>
 
-#### 📝 Pro_cn.yaml
-- **路径**: `Pro_cn.yaml` | **大小**: 16.4 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/Pro_cn.yaml)
+#### 📝 Mini_en.yaml
+- **路径**: `Mini_en.yaml` | **大小**: 4.7 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/Mini_en.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
 <details>
-<summary>🔍 策略组 (37个)</summary>
+<summary>🔍 策略组 (3个)</summary>
 
 | 名称 | 类型 |
 | :--- | :--- |
-| 👆 广告拦截 | `select` |
-| 👆 网络测试 | `select` |
-| 👆 即时通讯 | `select` |
-| 👆 社交平台 | `select` |
-| 👆 人工智能 | `select` |
-| 👆 开发服务 | `select` |
-| 👆 EMBY | `select` |
-| 👆 国际媒体 | `select` |
-| 👆 游戏平台 | `select` |
-| 👆 货币平台 | `select` |
-| 👆 谷歌服务 | `select` |
-| 👆 脸书服务 | `select` |
-| 👆 微软服务 | `select` |
-| 👆 苹果服务 | `select` |
-| 👆 国外流量 | `select` |
-| 👆 国内流量 | `select` |
-| 👆 漏网之鱼 | `select` |
-| 🔧 故障转移 | `fallback` |
-| 👆 全球手动 | `select` |
-| 👆 香港策略 | `select` |
-| ... | 还有 17 个 |
+| 👆 OUTCN | `select` |
+| 👆 CN | `select` |
+| 👆 MATCH | `select` |
 </details>
 
 #### 📝 Mini_cn.yaml
@@ -202,17 +215,4 @@
 | 👆 国外流量 | `select` |
 | 👆 国内流量 | `select` |
 | 👆 漏网之鱼 | `select` |
-</details>
-
-#### 📝 Mini_en.yaml
-- **路径**: `Mini_en.yaml` | **大小**: 4.7 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/666OS/Mini_en.yaml)
-- **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
-<details>
-<summary>🔍 策略组 (3个)</summary>
-
-| 名称 | 类型 |
-| :--- | :--- |
-| 👆 OUTCN | `select` |
-| 👆 CN | `select` |
-| 👆 MATCH | `select` |
 </details>
