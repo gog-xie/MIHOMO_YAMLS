@@ -9,6 +9,7 @@
 | **GeoLitePro.conf** | `$EN_KEY1`: Airport1<br>`$EN_KEY2`: Airport2 | [查看源码](https://raw.githubusercontent.com/gogyt/MIHOMO_YAMLS/main/Overwrite/THEOPENCLASH/General_Config/gogyt/GeoLitePro.conf) |
 | **GeoPro.conf** | `$EN_KEY1`: Airport1<br>`$EN_KEY2`: Airport2 | [查看源码](https://raw.githubusercontent.com/gogyt/MIHOMO_YAMLS/main/Overwrite/THEOPENCLASH/General_Config/gogyt/GeoPro.conf) |
 | **Rule.conf** | `$EN_KEY1`: Airport1<br>`$EN_KEY2`: Airport2 | [查看源码](https://raw.githubusercontent.com/gogyt/MIHOMO_YAMLS/main/Overwrite/THEOPENCLASH/General_Config/gogyt/Rule.conf) |
+| **RuleBeta.conf** | `$EN_KEY1`: Airport1<br>`$EN_KEY2`: Airport2 | [查看源码](https://raw.githubusercontent.com/gogyt/MIHOMO_YAMLS/main/Overwrite/THEOPENCLASH/General_Config/gogyt/RuleBeta.conf) |
 | **RuleLite.conf** | `$EN_KEY1`: Airport1<br>`$EN_KEY2`: Airport2 | [查看源码](https://raw.githubusercontent.com/gogyt/MIHOMO_YAMLS/main/Overwrite/THEOPENCLASH/General_Config/gogyt/RuleLite.conf) |
 | **RuleLitePro.conf** | `$EN_KEY1`: Airport1<br>`$EN_KEY2`: Airport2 | [查看源码](https://raw.githubusercontent.com/gogyt/MIHOMO_YAMLS/main/Overwrite/THEOPENCLASH/General_Config/gogyt/RuleLitePro.conf) |
 | **RulePlus.conf** | `$EN_KEY1`: Airport1<br>`$EN_KEY2`: Airport2 | [查看源码](https://raw.githubusercontent.com/gogyt/MIHOMO_YAMLS/main/Overwrite/THEOPENCLASH/General_Config/gogyt/RulePlus.conf) |
