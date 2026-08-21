@@ -8,49 +8,18 @@
 
 | 特性 | `RulePlus.yaml` | `RuleBeta.yaml` | `GeoLite.yaml` | `Geo.yaml` | `GeoLitePro.yaml` | `RuleLitePro.yaml` | `RuleLite.yaml` | `GeoPro.yaml` | `RulePro.yaml` | `Rule.yaml` |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **大小** | 56.6 KB | 60.7 KB | 28.3 KB | 35.3 KB | 35.0 KB | 39.1 KB | 32.4 KB | 44.1 KB | 51.3 KB | 41.5 KB |
+| **大小** | 56.9 KB | 61.1 KB | 28.5 KB | 35.6 KB | 35.2 KB | 39.4 KB | 32.7 KB | 44.4 KB | 51.7 KB | 41.7 KB |
 | **混合端口** | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 |
 | **面板地址** | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 |
 | **运行模式** | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule |
 | **TUN** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **策略组** | **122** | **124** | **39** | **59** | **63** | **63** | **39** | **98** | **93** | **59** |
-| **规则数** | **61** | **61** | **31** | **51** | **31** | **32** | **32** | **60** | **61** | **52** |
+| **策略组** | **124** | **126** | **39** | **59** | **63** | **63** | **39** | **100** | **95** | **59** |
+| **规则数** | **63** | **63** | **32** | **52** | **32** | **33** | **33** | **62** | **63** | **53** |
 
 ## 📄 配置详情
 
 #### 📝 RulePlus.yaml
-- **路径**: `RulePlus.yaml` | **大小**: 56.6 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RulePlus.yaml)
-- **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
-<details>
-<summary>🔍 策略组 (122个)</summary>
-
-| 名称 | 类型 |
-| :--- | :--- |
-| 👆 默认代理 | `select` |
-| 👆 默认直连 | `select` |
-| 👆 Github | `select` |
-| 👆 油管视频 | `select` |
-| 👆 谷歌FCM | `select` |
-| 👆 谷歌服务 | `select` |
-| 👆 Gemini | `select` |
-| 👆 Claude | `select` |
-| 👆 ChatGPT | `select` |
-| 👆 Grok | `select` |
-| 👆 AI服务 | `select` |
-| 👆 维基百科 | `select` |
-| 👆 即时通讯 | `select` |
-| 👆 国外电商 | `select` |
-| 👆 加密货币 | `select` |
-| 👆 社交媒体 | `select` |
-| 👆 国外娱乐 | `select` |
-| 👆 TikTok | `select` |
-| 👆 奈飞视频 | `select` |
-| 👆 迪士尼+ | `select` |
-| ... | 还有 102 个 |
-</details>
-
-#### 📝 RuleBeta.yaml
-- **路径**: `RuleBeta.yaml` | **大小**: 60.7 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleBeta.yaml)
+- **路径**: `RulePlus.yaml` | **大小**: 56.9 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RulePlus.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (124个)</summary>
@@ -80,8 +49,39 @@
 | ... | 还有 104 个 |
 </details>
 
+#### 📝 RuleBeta.yaml
+- **路径**: `RuleBeta.yaml` | **大小**: 61.1 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleBeta.yaml)
+- **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
+<details>
+<summary>🔍 策略组 (126个)</summary>
+
+| 名称 | 类型 |
+| :--- | :--- |
+| 👆 默认代理 | `select` |
+| 👆 默认直连 | `select` |
+| 👆 Github | `select` |
+| 👆 油管视频 | `select` |
+| 👆 谷歌FCM | `select` |
+| 👆 谷歌服务 | `select` |
+| 👆 Gemini | `select` |
+| 👆 Claude | `select` |
+| 👆 ChatGPT | `select` |
+| 👆 Grok | `select` |
+| 👆 AI服务 | `select` |
+| 👆 维基百科 | `select` |
+| 👆 即时通讯 | `select` |
+| 👆 国外电商 | `select` |
+| 👆 加密货币 | `select` |
+| 👆 社交媒体 | `select` |
+| 👆 国外娱乐 | `select` |
+| 👆 TikTok | `select` |
+| 👆 奈飞视频 | `select` |
+| 👆 迪士尼+ | `select` |
+| ... | 还有 106 个 |
+</details>
+
 #### 📝 GeoLite.yaml
-- **路径**: `GeoLite.yaml` | **大小**: 28.3 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/GeoLite.yaml)
+- **路径**: `GeoLite.yaml` | **大小**: 28.5 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/GeoLite.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (39个)</summary>
@@ -112,7 +112,7 @@
 </details>
 
 #### 📝 Geo.yaml
-- **路径**: `Geo.yaml` | **大小**: 35.3 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/Geo.yaml)
+- **路径**: `Geo.yaml` | **大小**: 35.6 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/Geo.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (59个)</summary>
@@ -143,7 +143,7 @@
 </details>
 
 #### 📝 GeoLitePro.yaml
-- **路径**: `GeoLitePro.yaml` | **大小**: 35.0 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/GeoLitePro.yaml)
+- **路径**: `GeoLitePro.yaml` | **大小**: 35.2 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/GeoLitePro.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (63个)</summary>
@@ -174,7 +174,7 @@
 </details>
 
 #### 📝 RuleLitePro.yaml
-- **路径**: `RuleLitePro.yaml` | **大小**: 39.1 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleLitePro.yaml)
+- **路径**: `RuleLitePro.yaml` | **大小**: 39.4 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleLitePro.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (63个)</summary>
@@ -205,7 +205,7 @@
 </details>
 
 #### 📝 RuleLite.yaml
-- **路径**: `RuleLite.yaml` | **大小**: 32.4 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleLite.yaml)
+- **路径**: `RuleLite.yaml` | **大小**: 32.7 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleLite.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (39个)</summary>
@@ -236,10 +236,10 @@
 </details>
 
 #### 📝 GeoPro.yaml
-- **路径**: `GeoPro.yaml` | **大小**: 44.1 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/GeoPro.yaml)
+- **路径**: `GeoPro.yaml` | **大小**: 44.4 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/GeoPro.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
-<summary>🔍 策略组 (98个)</summary>
+<summary>🔍 策略组 (100个)</summary>
 
 | 名称 | 类型 |
 | :--- | :--- |
@@ -263,14 +263,14 @@
 | 👆 TikTok | `select` |
 | 👆 奈飞视频 | `select` |
 | 👆 迪士尼+ | `select` |
-| ... | 还有 78 个 |
+| ... | 还有 80 个 |
 </details>
 
 #### 📝 RulePro.yaml
-- **路径**: `RulePro.yaml` | **大小**: 51.3 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RulePro.yaml)
+- **路径**: `RulePro.yaml` | **大小**: 51.7 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RulePro.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
-<summary>🔍 策略组 (93个)</summary>
+<summary>🔍 策略组 (95个)</summary>
 
 | 名称 | 类型 |
 | :--- | :--- |
@@ -294,11 +294,11 @@
 | 👆 TikTok | `select` |
 | 👆 奈飞视频 | `select` |
 | 👆 迪士尼+ | `select` |
-| ... | 还有 73 个 |
+| ... | 还有 75 个 |
 </details>
 
 #### 📝 Rule.yaml
-- **路径**: `Rule.yaml` | **大小**: 41.5 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/Rule.yaml)
+- **路径**: `Rule.yaml` | **大小**: 41.7 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/Rule.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (59个)</summary>
