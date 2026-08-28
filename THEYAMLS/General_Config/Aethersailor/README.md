@@ -75,7 +75,7 @@
 | ♻️ 🇸🇬 新加坡节点 | `url-test` |
 | ♻️ 🇼🇸 台湾节点 | `url-test` |
 | ♻️ 🇰🇷 韩国节点 | `url-test` |
-| ♻️ 🎯 全球直连 | `url-test` |
+| 👆 🎯 全球直连 | `select` |
 </details>
 
 #### 📝 Custom_Clash_GFW_Fallback.yaml
@@ -87,7 +87,7 @@
 | 名称 | 类型 |
 | :--- | :--- |
 | 🔧 🚀 故障转移 | `fallback` |
-| ♻️ 🎯 全球直连 | `url-test` |
+| 👆 🎯 全球直连 | `select` |
 </details>
 
 #### 📝 Custom_Clash_Fallback.yaml
@@ -193,7 +193,7 @@
 | :--- | :--- |
 | 👆 🚀 手动选择 | `select` |
 | ♻️ ♻️ 自动选择 | `url-test` |
-| ♻️ 🎯 全球直连 | `url-test` |
+| 👆 🎯 全球直连 | `select` |
 </details>
 
 #### 📝 Custom_Clash_Lite.yaml
@@ -222,7 +222,7 @@
 | ♻️ 🇸🇬 新加坡节点 | `url-test` |
 | ♻️ 🇼🇸 台湾节点 | `url-test` |
 | ♻️ 🇰🇷 韩国节点 | `url-test` |
-| ♻️ 🎯 全球直连 | `url-test` |
+| 👆 🎯 全球直连 | `select` |
 </details>
 
 #### 📝 Custom_Clash_DIY&Airport.yaml

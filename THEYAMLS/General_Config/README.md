@@ -8,13 +8,13 @@
 
 | 特性 | `clash-fallback.yaml` | `clash-fallback-std.yaml` | `clash-all-fallback.yaml` | `clash-fallback-all.yaml` | `clash-fallback-dialer.yaml` | `mihomoConfigLite.yaml` | `mihomoconfig.yaml` | `Geo.yaml` | `Rule-Set.yaml` | `Geo_Clashmi_Overwrite.yaml` | `config.yaml` | `Clashmi.yaml` | `Clashmi-fx.yaml` | `clash-advanced.yaml` | `clash-lite.yaml` | `Clash-Fallback.yaml` | `clash-standard-noicon.yaml` | `MihomoAIO.yaml` | `MihomoProMax.yaml` | `MihomoProPlus.yaml` | `mihomo.yaml` | `config.yaml` | `config_lite.yaml` | `RulePlus.yaml` | `RuleBeta.yaml` | `GeoLite.yaml` | `Geo.yaml` | `GeoLitePro.yaml` | `RuleLitePro.yaml` | `RuleLite.yaml` | `GeoPro.yaml` | `RulePro.yaml` | `Rule.yaml` | `config.yaml` | `BlackList-03-Non.AntiAD.yaml` | `[Desktop]-WhiteList-03-Non.AntiAD.yaml` | `[通用模版]-WhiteList-01.yaml` | `[Mobile]-WhiteList-01.yaml` | `[Desktop]-WhiteList-01.yaml` | `[通用模版]-WhiteList-02-Min.AntiAD.yaml` | `[Desktop]-WhiteList-02-Min.AntiAD.yaml` | `BlackList-02-Min.AntiAD.yaml` | `[通用模版]-WhiteList-03-Non.AntiAD.yaml` | `[Mobile]-WhiteList-02-Min.AntiAD.yaml` | `[Mobile]-WhiteList-03-Non.AntiAD.yaml` | `BlackList-01.yaml` | `mihomo.yaml` | `config.yaml` | `config.yaml` | `backup.yaml` | `Clash_Sample.yaml` | `Custom_Clash_Full_Fallback.yaml` | `Custom_Clash_Lite_Fallback.yaml` | `Custom_Clash_GFW_Fallback.yaml` | `Custom_Clash_Fallback.yaml` | `Complete_YAML_Configuration_Template.yaml` | `Custom_Clash.yaml` | `Custom_Clash_GFW.yaml` | `Custom_Clash_Lite.yaml` | `Custom_Clash_DIY&Airport.yaml` | `Custom_Clash_Selfhosted_Provider_Fallback.yaml` | `Custom_Clash_Full.yaml` | `Custom_Clash_Selfhosted_Manual_Fallback.yaml` | `mihomo_multi.yaml` | `mihomo_single.yaml` | `mihomo.yaml` | `mihomo.yaml` | `base-clash-ruleset.yaml` | `3-subscription-clash-rule-set.yaml` | `2-subscription-clash-rule-set.yaml` | `AIB.yaml` | `AIO.yaml` | `Pro_cn.yaml` | `OneTouch.yaml` | `MihomoPro.yaml` | `Lite_cn.yaml` | `Pro_en.yaml` | `Lite_en.yaml` | `Mini_en.yaml` | `Mini_cn.yaml` | `Overwrite-Clash-Bypass.yaml` | `Overwrite-Clash.yaml` | `mihomo.yaml` | `mihomo.yaml` | `mihomo.yaml` | `config.yaml` | `Proxy-override.yaml` | `Seven1_fallback_Rule-Set.yaml` | `Seven1_fallback_Rule-Set_Clashmi_Overwrite.yaml` | `Seven1_fallback_Geo.yaml` | `Clash-Airport.yaml` | `us_la.yaml` | `configfull_lite.yaml` | `configfull.yaml` | `configfull_NoAd.yaml` | `mihomo.yaml` | `ConfigForClash.yaml` | `Ayanami0_config_geo-lite.yaml` | `Clash.yaml` |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **大小** | 15.9 KB | 17.3 KB | 17.2 KB | 18.6 KB | 16.3 KB | 17.2 KB | 24.8 KB | 19.0 KB | 21.0 KB | 18.6 KB | 12.8 KB | 19.2 KB | 18.6 KB | 37.3 KB | 16.7 KB | 23.2 KB | 13.4 KB | 28.3 KB | 25.7 KB | 26.2 KB | 22.1 KB | 7.3 KB | 2.9 KB | 56.7 KB | 60.8 KB | 28.2 KB | 35.4 KB | 34.9 KB | 39.1 KB | 32.4 KB | 44.2 KB | 51.5 KB | 41.5 KB | 23.5 KB | 696.9 KB | 696.9 KB | 2055.2 KB | 696.9 KB | 696.9 KB | 2053.9 KB | 696.9 KB | 696.9 KB | 2053.9 KB | 696.9 KB | 696.9 KB | 696.9 KB | 19.9 KB | 13.8 KB | 18.7 KB | 12.5 KB | 8.4 KB | 36.2 KB | 20.5 KB | 3.1 KB | 43.2 KB | 44.0 KB | 17.3 KB | 3.1 KB | 11.2 KB | 17.9 KB | 45.4 KB | 36.5 KB | 45.8 KB | 12.7 KB | 12.4 KB | 6.1 KB | 30.5 KB | 15.8 KB | 18.6 KB | 18.0 KB | 11.0 KB | 10.8 KB | 16.4 KB | 12.1 KB | 22.2 KB | 11.8 KB | 15.4 KB | 11.0 KB | 4.7 KB | 4.9 KB | 17.3 KB | 17.1 KB | 14.6 KB | 6.2 KB | 15.1 KB | 28.5 KB | 32.6 KB | 24.5 KB | 23.7 KB | 21.7 KB | 17.5 KB | 18.5 KB | 18.6 KB | 35.4 KB | 34.9 KB | 45.1 KB | 49.3 KB | 3.9 KB | 27.3 KB |
+| **大小** | 15.9 KB | 17.3 KB | 17.2 KB | 18.6 KB | 16.3 KB | 17.4 KB | 25.0 KB | 19.0 KB | 21.0 KB | 18.6 KB | 12.8 KB | 19.2 KB | 18.6 KB | 37.3 KB | 16.7 KB | 23.2 KB | 13.4 KB | 28.3 KB | 25.7 KB | 26.2 KB | 22.1 KB | 7.3 KB | 2.9 KB | 56.7 KB | 59.3 KB | 27.9 KB | 35.4 KB | 34.6 KB | 38.8 KB | 32.1 KB | 44.2 KB | 51.5 KB | 41.5 KB | 23.5 KB | 696.9 KB | 696.9 KB | 2055.2 KB | 696.9 KB | 696.9 KB | 2053.9 KB | 696.9 KB | 696.9 KB | 2053.9 KB | 696.9 KB | 696.9 KB | 696.9 KB | 19.9 KB | 13.8 KB | 18.7 KB | 12.5 KB | 8.4 KB | 36.2 KB | 20.5 KB | 3.1 KB | 43.2 KB | 44.0 KB | 17.3 KB | 3.1 KB | 11.2 KB | 17.9 KB | 45.4 KB | 36.5 KB | 45.8 KB | 12.7 KB | 12.4 KB | 6.1 KB | 30.5 KB | 15.8 KB | 18.6 KB | 18.0 KB | 11.0 KB | 10.8 KB | 16.4 KB | 12.1 KB | 22.2 KB | 11.8 KB | 15.4 KB | 11.0 KB | 4.7 KB | 4.9 KB | 17.3 KB | 17.1 KB | 14.6 KB | 6.2 KB | 15.1 KB | 28.5 KB | 32.6 KB | 24.9 KB | 24.2 KB | 22.0 KB | 17.5 KB | 18.5 KB | 18.6 KB | 35.4 KB | 34.9 KB | 45.1 KB | 49.3 KB | 3.9 KB | 27.3 KB |
 | **混合端口** | 7893 | 7893 | 7893 | 7893 | 7893 | 7890 | 7890 | 7893 | 7893 | 7893 | 7890 | 7893 | 7893 | 7890 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 1080 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7890 | 7890 | 7890 | 7890 | 7890 | 7890 | 7890 | 7890 | 7890 | 7890 | 7890 | 7890 | 7890 | 7254 | 7890 | 7892 | 7892 | 7892 | - | - | - | - | 7893 | - | - | - | - | - | - | - | 7897 | 7897 | 7890 | 7890 | - | - | - | 7890 | 7890 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | - | - | 0 | 8899 | 7890 | 7893 | 7890 | 7893 | 7893 | 7893 | - | - | 7890 | 7890 | 7890 | 7890 | 7892 | 7890 | 7890 |
 | **面板地址** | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | - | 127.0.0.1:9092 | 127.0.0.1:9092 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | - | - | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | :9090 | 127.0.0.1:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | - | - | - | - | 0.0.0.0:9090 | - | - | - | 127.0.0.1:9090 | - | - | - | - | - | 127.0.0.1:9090 | 0.0.0.0:7891 | - | - | - | 0.0.0.0:9090 | 0.0.0.0:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | - | - | - | - | 0.0.0.0:9090 | 127.0.0.1:9090 | 127.0.0.1:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 127.0.0.1:9092 | 127.0.0.1:9092 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 127.0.0.1:9090 | :9090 |
 | **运行模式** | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule | Rule | Rule |
 | **TUN** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🚫 | 🚫 | 🚫 | 🚫 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🚫 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🚫 | 🚫 | ✅ | ✅ | 🚫 | 🚫 | 🚫 | 🚫 | ✅ | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | ✅ | ✅ | ✅ | ✅ | 🚫 | 🚫 | 🚫 | ✅ | ✅ | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | 🚫 | ✅ | 🚫 | ✅ | ✅ | 🚫 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🚫 | 🚫 | 🚫 |
-| **策略组** | **34** | **36** | **53** | **61** | **35** | **26** | **40** | **40** | **40** | **40** | **26** | **30** | **30** | **65** | **33** | **49** | **36** | **61** | **54** | **54** | **59** | **17** | **1** | **124** | **126** | **39** | **59** | **63** | **63** | **39** | **100** | **95** | **59** | **49** | **143** | **154** | **177** | **155** | **156** | **176** | **155** | **144** | **175** | **154** | **153** | **145** | **10** | **29** | **13** | **22** | **15** | **52** | **19** | **2** | **35** | **35** | **35** | **3** | **19** | **33** | **36** | **52** | **36** | **33** | **33** | **8** | **80** | **27** | **39** | **38** | **24** | **23** | **37** | **14** | **51** | **18** | **37** | **18** | **3** | **3** | **33** | **33** | **35** | **10** | **19** | **25** | **16** | **41** | **41** | **41** | **23** | **15** | **47** | **62** | **59** | **96** | **62** | **1** | **27** |
-| **规则数** | **43** | **43** | **42** | **53** | **43** | **21** | **49** | **26** | **27** | **26** | **23** | **34** | **34** | **98** | **55** | **46** | **43** | **52** | **45** | **44** | **33** | **24** | **16** | **63** | **63** | **32** | **52** | **32** | **33** | **33** | **62** | **63** | **53** | **30** | **181** | **228** | **232** | **232** | **234** | **227** | **229** | **182** | **226** | **227** | **226** | **187** | **59** | **33** | **37** | **25** | **11** | **54** | **26** | **5** | **47** | **47** | **47** | **5** | **26** | **51** | **47** | **54** | **47** | **22** | **22** | **17** | **59** | **36** | **36** | **36** | **34** | **34** | **29** | **22** | **39** | **21** | **29** | **20** | **7** | **7** | **47** | **47** | **17** | **13** | **27** | **35** | **173** | **28** | **28** | **28** | **36** | **34** | **38** | **96** | **95** | **1** | **62** | **11** | **68** |
+| **策略组** | **34** | **36** | **53** | **61** | **35** | **26** | **40** | **40** | **40** | **40** | **26** | **30** | **30** | **65** | **33** | **49** | **36** | **61** | **54** | **54** | **59** | **17** | **1** | **124** | **138** | **39** | **59** | **63** | **63** | **39** | **100** | **95** | **59** | **49** | **143** | **154** | **177** | **155** | **156** | **176** | **155** | **144** | **175** | **154** | **153** | **145** | **10** | **29** | **13** | **22** | **15** | **52** | **19** | **2** | **35** | **35** | **35** | **3** | **19** | **33** | **36** | **52** | **36** | **33** | **33** | **8** | **80** | **27** | **39** | **38** | **24** | **23** | **37** | **14** | **51** | **18** | **37** | **18** | **3** | **3** | **33** | **33** | **35** | **10** | **19** | **25** | **16** | **41** | **41** | **41** | **23** | **15** | **47** | **62** | **59** | **96** | **62** | **1** | **27** |
+| **规则数** | **43** | **43** | **42** | **53** | **43** | **21** | **49** | **26** | **27** | **26** | **23** | **34** | **34** | **98** | **55** | **46** | **43** | **52** | **45** | **44** | **33** | **24** | **16** | **63** | **63** | **32** | **52** | **32** | **33** | **33** | **62** | **63** | **53** | **30** | **181** | **228** | **232** | **232** | **234** | **227** | **229** | **182** | **226** | **227** | **226** | **187** | **59** | **33** | **37** | **25** | **11** | **54** | **26** | **5** | **47** | **47** | **47** | **5** | **26** | **51** | **47** | **54** | **47** | **22** | **22** | **17** | **59** | **36** | **36** | **36** | **34** | **34** | **29** | **22** | **39** | **21** | **29** | **20** | **7** | **7** | **47** | **47** | **17** | **13** | **27** | **35** | **173** | **29** | **29** | **29** | **36** | **34** | **38** | **96** | **95** | **1** | **62** | **11** | **68** |
 
 ## 📄 配置详情
 
@@ -223,7 +223,7 @@
 ### 👤 AIsouler
 
 #### 📝 mihomoConfigLite.yaml
-- **路径**: `AIsouler/mihomoConfigLite.yaml` | **大小**: 17.2 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/AIsouler/mihomoConfigLite.yaml)
+- **路径**: `AIsouler/mihomoConfigLite.yaml` | **大小**: 17.4 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/AIsouler/mihomoConfigLite.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (26个)</summary>
@@ -254,7 +254,7 @@
 </details>
 
 #### 📝 mihomoconfig.yaml
-- **路径**: `AIsouler/mihomoconfig.yaml` | **大小**: 24.8 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/AIsouler/mihomoconfig.yaml)
+- **路径**: `AIsouler/mihomoconfig.yaml` | **大小**: 25.0 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/AIsouler/mihomoconfig.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (40个)</summary>
@@ -719,7 +719,7 @@
 | ♻️ 🇸🇬 新加坡节点 | `url-test` |
 | ♻️ 🇼🇸 台湾节点 | `url-test` |
 | ♻️ 🇰🇷 韩国节点 | `url-test` |
-| ♻️ 🎯 全球直连 | `url-test` |
+| 👆 🎯 全球直连 | `select` |
 </details>
 
 #### 📝 Custom_Clash_GFW_Fallback.yaml
@@ -731,7 +731,7 @@
 | 名称 | 类型 |
 | :--- | :--- |
 | 🔧 🚀 故障转移 | `fallback` |
-| ♻️ 🎯 全球直连 | `url-test` |
+| 👆 🎯 全球直连 | `select` |
 </details>
 
 #### 📝 Custom_Clash_Fallback.yaml
@@ -837,7 +837,7 @@
 | :--- | :--- |
 | 👆 🚀 手动选择 | `select` |
 | ♻️ ♻️ 自动选择 | `url-test` |
-| ♻️ 🎯 全球直连 | `url-test` |
+| 👆 🎯 全球直连 | `select` |
 </details>
 
 #### 📝 Custom_Clash_Lite.yaml
@@ -866,7 +866,7 @@
 | ♻️ 🇸🇬 新加坡节点 | `url-test` |
 | ♻️ 🇼🇸 台湾节点 | `url-test` |
 | ♻️ 🇰🇷 韩国节点 | `url-test` |
-| ♻️ 🎯 全球直连 | `url-test` |
+| 👆 🎯 全球直连 | `select` |
 </details>
 
 #### 📝 Custom_Clash_DIY&Airport.yaml
@@ -1623,7 +1623,7 @@
 ### 👤 Seven1echo
 
 #### 📝 Seven1_fallback_Rule-Set.yaml
-- **路径**: `Seven1echo/Seven1_fallback_Rule-Set.yaml` | **大小**: 24.5 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Seven1echo/Seven1_fallback_Rule-Set.yaml)
+- **路径**: `Seven1echo/Seven1_fallback_Rule-Set.yaml` | **大小**: 24.9 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Seven1echo/Seven1_fallback_Rule-Set.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (41个)</summary>
@@ -1654,7 +1654,7 @@
 </details>
 
 #### 📝 Seven1_fallback_Rule-Set_Clashmi_Overwrite.yaml
-- **路径**: `Seven1echo/Seven1_fallback_Rule-Set_Clashmi_Overwrite.yaml` | **大小**: 23.7 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Seven1echo/Seven1_fallback_Rule-Set_Clashmi_Overwrite.yaml)
+- **路径**: `Seven1echo/Seven1_fallback_Rule-Set_Clashmi_Overwrite.yaml` | **大小**: 24.2 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Seven1echo/Seven1_fallback_Rule-Set_Clashmi_Overwrite.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (41个)</summary>
@@ -1685,7 +1685,7 @@
 </details>
 
 #### 📝 Seven1_fallback_Geo.yaml
-- **路径**: `Seven1echo/Seven1_fallback_Geo.yaml` | **大小**: 21.7 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Seven1echo/Seven1_fallback_Geo.yaml)
+- **路径**: `Seven1echo/Seven1_fallback_Geo.yaml` | **大小**: 22.0 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Seven1echo/Seven1_fallback_Geo.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (41个)</summary>
@@ -2013,10 +2013,10 @@
 </details>
 
 #### 📝 RuleBeta.yaml
-- **路径**: `gogyt/RuleBeta.yaml` | **大小**: 60.8 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleBeta.yaml)
+- **路径**: `gogyt/RuleBeta.yaml` | **大小**: 59.3 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleBeta.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
-<summary>🔍 策略组 (126个)</summary>
+<summary>🔍 策略组 (138个)</summary>
 
 | 名称 | 类型 |
 | :--- | :--- |
@@ -2040,11 +2040,11 @@
 | 👆 TikTok | `select` |
 | 👆 奈飞视频 | `select` |
 | 👆 迪士尼+ | `select` |
-| ... | 还有 106 个 |
+| ... | 还有 118 个 |
 </details>
 
 #### 📝 GeoLite.yaml
-- **路径**: `gogyt/GeoLite.yaml` | **大小**: 28.2 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/GeoLite.yaml)
+- **路径**: `gogyt/GeoLite.yaml` | **大小**: 27.9 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/GeoLite.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (39个)</summary>
@@ -2106,7 +2106,7 @@
 </details>
 
 #### 📝 GeoLitePro.yaml
-- **路径**: `gogyt/GeoLitePro.yaml` | **大小**: 34.9 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/GeoLitePro.yaml)
+- **路径**: `gogyt/GeoLitePro.yaml` | **大小**: 34.6 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/GeoLitePro.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (63个)</summary>
@@ -2137,7 +2137,7 @@
 </details>
 
 #### 📝 RuleLitePro.yaml
-- **路径**: `gogyt/RuleLitePro.yaml` | **大小**: 39.1 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleLitePro.yaml)
+- **路径**: `gogyt/RuleLitePro.yaml` | **大小**: 38.8 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleLitePro.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (63个)</summary>
@@ -2168,7 +2168,7 @@
 </details>
 
 #### 📝 RuleLite.yaml
-- **路径**: `gogyt/RuleLite.yaml` | **大小**: 32.4 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleLite.yaml)
+- **路径**: `gogyt/RuleLite.yaml` | **大小**: 32.1 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleLite.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (39个)</summary>
