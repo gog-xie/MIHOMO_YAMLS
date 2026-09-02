@@ -8,7 +8,7 @@
 
 | 特性 | `Overwrite-Clash-Bypass.yaml` | `Overwrite-Clash.yaml` |
 | :--- | :--- | :--- |
-| **大小** | 17.3 KB | 17.1 KB |
+| **大小** | 17.2 KB | 17.1 KB |
 | **混合端口** | - | - |
 | **面板地址** | - | - |
 | **运行模式** | rule | rule |
@@ -19,7 +19,7 @@
 ## 📄 配置详情
 
 #### 📝 Overwrite-Clash-Bypass.yaml
-- **路径**: `Overwrite-Clash-Bypass.yaml` | **大小**: 17.3 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Giveupmoon/Overwrite-Clash-Bypass.yaml)
+- **路径**: `Overwrite-Clash-Bypass.yaml` | **大小**: 17.2 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/Giveupmoon/Overwrite-Clash-Bypass.yaml)
 - **模式**: rule | **TUN**: 🚫 | **IPv6**: 🚫
 <details>
 <summary>🔍 策略组 (33个)</summary>

@@ -8,7 +8,7 @@
 
 | 特性 | `RulePlus.yaml` | `RuleBeta.yaml` | `GeoLite.yaml` | `Geo.yaml` | `GeoLitePro.yaml` | `RuleLitePro.yaml` | `RuleLite.yaml` | `GeoPro.yaml` | `RulePro.yaml` | `Rule.yaml` |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **大小** | 56.7 KB | 59.3 KB | 27.9 KB | 35.4 KB | 34.6 KB | 38.8 KB | 32.1 KB | 44.2 KB | 51.5 KB | 41.5 KB |
+| **大小** | 56.7 KB | 67.1 KB | 27.9 KB | 35.4 KB | 34.6 KB | 38.8 KB | 32.1 KB | 44.2 KB | 51.5 KB | 41.5 KB |
 | **混合端口** | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 | 7893 |
 | **面板地址** | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 |
 | **运行模式** | rule | rule | rule | rule | rule | rule | rule | rule | rule | rule |
@@ -50,7 +50,7 @@
 </details>
 
 #### 📝 RuleBeta.yaml
-- **路径**: `RuleBeta.yaml` | **大小**: 59.3 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleBeta.yaml)
+- **路径**: `RuleBeta.yaml` | **大小**: 67.1 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/gogyt/RuleBeta.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
 <details>
 <summary>🔍 策略组 (138个)</summary>
