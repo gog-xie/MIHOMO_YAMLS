@@ -58,6 +58,7 @@ anchor:
 
   SelectMS: &SelectMS
     type: select
+    include-all: true
     proxies:
       - 香港节点
       - 美国节点
@@ -66,8 +67,6 @@ anchor:
       - 台湾节点
       - 自动选择
       - 全球直连
-    use:
-      - Sub-store
 
   SelectMH: &SelectMH
     type: select
