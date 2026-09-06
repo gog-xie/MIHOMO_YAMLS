@@ -6,79 +6,17 @@
 
 ## ⚔️ 配置横向对比
 
-| 特性 | `clash-advanced.yaml` | `clash-lite.yaml` | `Clash-Fallback.yaml` | `clash-standard-noicon.yaml` |
+| 特性 | `Clash-Fallback.yaml` | `clash-advanced.yaml` | `clash-standard-noicon.yaml` | `clash-lite.yaml` |
 | :--- | :--- | :--- | :--- | :--- |
-| **大小** | 37.3 KB | 16.7 KB | 23.2 KB | 13.4 KB |
-| **混合端口** | 7890 | 7893 | 7893 | 7893 |
-| **面板地址** | 0.0.0.0:9090 | 0.0.0.0:9090 | 0.0.0.0:9090 | 127.0.0.1:9090 |
+| **大小** | 23.2 KB | 37.3 KB | 13.4 KB | 16.7 KB |
+| **混合端口** | 7893 | 7890 | 7893 | 7893 |
+| **面板地址** | 0.0.0.0:9090 | 0.0.0.0:9090 | 127.0.0.1:9090 | 0.0.0.0:9090 |
 | **运行模式** | rule | rule | rule | rule |
 | **TUN** | ✅ | ✅ | ✅ | ✅ |
-| **策略组** | **65** | **33** | **49** | **36** |
-| **规则数** | **98** | **55** | **46** | **43** |
+| **策略组** | **49** | **65** | **36** | **33** |
+| **规则数** | **46** | **98** | **43** | **55** |
 
 ## 📄 配置详情
-
-#### 📝 clash-advanced.yaml
-- **路径**: `clash-advanced.yaml` | **大小**: 37.3 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/sev7enshare/clash-advanced.yaml)
-- **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
-<details>
-<summary>🔍 策略组 (65个)</summary>
-
-| 名称 | 类型 |
-| :--- | :--- |
-| 👆 节点选择 | `select` |
-| 👆 🔗 代理 | `select` |
-| 👆 🚫 拒绝 | `select` |
-| 👆 ⚪ 丢弃 | `select` |
-| 👆 YouTube | `select` |
-| 👆 FCM | `select` |
-| 👆 Crypto | `select` |
-| 👆 Google | `select` |
-| 👆 Meta | `select` |
-| 👆 AI | `select` |
-| 👆 GitHub | `select` |
-| 👆 OneDrive | `select` |
-| 👆 Microsoft | `select` |
-| 👆 Telegram | `select` |
-| 👆 Discord | `select` |
-| 👆 Talkatone | `select` |
-| 👆 LINE | `select` |
-| 👆 Signal | `select` |
-| 👆 TikTok | `select` |
-| 👆 NETFLIX | `select` |
-| ... | 还有 45 个 |
-</details>
-
-#### 📝 clash-lite.yaml
-- **路径**: `clash-lite.yaml` | **大小**: 16.7 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/sev7enshare/clash-lite.yaml)
-- **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
-<details>
-<summary>🔍 策略组 (33个)</summary>
-
-| 名称 | 类型 |
-| :--- | :--- |
-| 👆 🚀 默认代理 | `select` |
-| ♻️ ♻️ 自动选择 | `url-test` |
-| 👆 YouTube | `select` |
-| 👆 Google | `select` |
-| 👆 ChatGPT | `select` |
-| 👆 Meta | `select` |
-| 👆 twitter | `select` |
-| 👆 数字货币 | `select` |
-| 👆 GitHub | `select` |
-| 👆 TikTok | `select` |
-| 👆 Telegram | `select` |
-| 👆 Line | `select` |
-| 👆 NETFLIX | `select` |
-| 👆 DisneyPlus | `select` |
-| 👆 AppleTV | `select` |
-| 👆 PayPal | `select` |
-| 👆 STEAM | `select` |
-| 👆 哔哩哔哩 | `select` |
-| 👆 国内媒体 | `select` |
-| 👆 微软硬盘 | `select` |
-| ... | 还有 13 个 |
-</details>
 
 #### 📝 Clash-Fallback.yaml
 - **路径**: `Clash-Fallback.yaml` | **大小**: 23.2 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/sev7enshare/Clash-Fallback.yaml)
@@ -111,6 +49,37 @@
 | ... | 还有 29 个 |
 </details>
 
+#### 📝 clash-advanced.yaml
+- **路径**: `clash-advanced.yaml` | **大小**: 37.3 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/sev7enshare/clash-advanced.yaml)
+- **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
+<details>
+<summary>🔍 策略组 (65个)</summary>
+
+| 名称 | 类型 |
+| :--- | :--- |
+| 👆 节点选择 | `select` |
+| 👆 🔗 代理 | `select` |
+| 👆 🚫 拒绝 | `select` |
+| 👆 ⚪ 丢弃 | `select` |
+| 👆 YouTube | `select` |
+| 👆 FCM | `select` |
+| 👆 Crypto | `select` |
+| 👆 Google | `select` |
+| 👆 Meta | `select` |
+| 👆 AI | `select` |
+| 👆 GitHub | `select` |
+| 👆 OneDrive | `select` |
+| 👆 Microsoft | `select` |
+| 👆 Telegram | `select` |
+| 👆 Discord | `select` |
+| 👆 Talkatone | `select` |
+| 👆 LINE | `select` |
+| 👆 Signal | `select` |
+| 👆 TikTok | `select` |
+| 👆 NETFLIX | `select` |
+| ... | 还有 45 个 |
+</details>
+
 #### 📝 clash-standard-noicon.yaml
 - **路径**: `clash-standard-noicon.yaml` | **大小**: 13.4 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/sev7enshare/clash-standard-noicon.yaml)
 - **模式**: rule | **TUN**: ✅ | **IPv6**: ✅
@@ -140,4 +109,35 @@
 | 👆 Crypto | `select` |
 | 👆 Amazon | `select` |
 | ... | 还有 16 个 |
+</details>
+
+#### 📝 clash-lite.yaml
+- **路径**: `clash-lite.yaml` | **大小**: 16.7 KB | [查看源码](https://github.com/gogyt/MIHOMO_YAMLS/blob/main/THEYAMLS/General_Config/sev7enshare/clash-lite.yaml)
+- **模式**: rule | **TUN**: ✅ | **IPv6**: 🚫
+<details>
+<summary>🔍 策略组 (33个)</summary>
+
+| 名称 | 类型 |
+| :--- | :--- |
+| 👆 🚀 默认代理 | `select` |
+| ♻️ ♻️ 自动选择 | `url-test` |
+| 👆 YouTube | `select` |
+| 👆 Google | `select` |
+| 👆 ChatGPT | `select` |
+| 👆 Meta | `select` |
+| 👆 twitter | `select` |
+| 👆 数字货币 | `select` |
+| 👆 GitHub | `select` |
+| 👆 TikTok | `select` |
+| 👆 Telegram | `select` |
+| 👆 Line | `select` |
+| 👆 NETFLIX | `select` |
+| 👆 DisneyPlus | `select` |
+| 👆 AppleTV | `select` |
+| 👆 PayPal | `select` |
+| 👆 STEAM | `select` |
+| 👆 哔哩哔哩 | `select` |
+| 👆 国内媒体 | `select` |
+| 👆 微软硬盘 | `select` |
+| ... | 还有 13 个 |
 </details>
